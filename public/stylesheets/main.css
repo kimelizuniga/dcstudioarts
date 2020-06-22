@@ -20,7 +20,7 @@ h5 {
 }
 
 footer {
-    margin-top: 12rem;
+    margin-top: 9rem;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -44,6 +44,10 @@ footer {
     margin: 0;
     padding-top: 2rem;
     
+}
+
+.headingDiv {
+    padding-top: 2rem;
 }
 
 
@@ -118,7 +122,7 @@ footer {
 @media (max-width: 900px){
 
     footer{
-        margin-top: 16rem;
+        margin-top: 13rem;
     }
 
     .navbar-brand {
@@ -143,6 +147,11 @@ footer {
         text-align: left;
     }
 
-  
+}
 
+@media (max-width: 360px)  {
+    
+    footer{
+        margin-top: 11rem;
+    }
 }
