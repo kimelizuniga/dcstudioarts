@@ -23,6 +23,13 @@ app.get('/', (req,res)=>{
     res.render('index')
 })
 
-app.listen(4000, ()=>{
-    console.log('Server 4000 started')
-})
+// PORT LISTEN
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 4000;
+}
+
+app.listen(port, () => {
+    console.log("Server started " + port);
+});
