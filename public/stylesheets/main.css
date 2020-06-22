@@ -20,8 +20,9 @@ h5 {
 }
 
 footer {
-    margin-top: 9rem;
+   padding-top: 1rem;
 }
+
 
 .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(78,65,59, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -108,7 +109,6 @@ footer {
     height: 100%;
     width: 50%;
     margin: 0 auto;
-    
 }
 
 #navProp a {
@@ -120,10 +120,6 @@ footer {
 /* MOBILE RESPONSIVE */
 
 @media (max-width: 900px){
-
-    footer{
-        margin-top: 13rem;
-    }
 
     .navbar-brand {
         margin-left: -2rem;
@@ -147,11 +143,4 @@ footer {
         text-align: left;
     }
 
-}
-
-@media (max-width: 360px)  {
-    
-    footer{
-        margin-top: 11rem;
-    }
 }
