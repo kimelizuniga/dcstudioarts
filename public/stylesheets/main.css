@@ -1,0 +1,89 @@
+body {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+a {
+    color: black;
+    
+   
+}
+
+a:hover {
+    color: darkgray;
+    text-decoration: none;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(78,65,59, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.pages {
+    height: 100vh;
+}
+
+.card {
+    margin-bottom: 2rem;
+    
+}
+
+.row {
+    margin: 0;
+    padding-top: 2rem;
+    
+}
+
+
+#landing {
+    background-image: url('https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#landingContent {  
+    padding-top: 40vh;
+}
+
+#gallery {
+    background-color: lightgray;
+    height: 100%;
+    
+    
+}
+
+#gallery h1 {
+    padding-top: 3rem;
+}
+
+#about {
+    background-image: url('https://images.unsplash.com/photo-1471666875520-c75081f42081?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1138&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;  
+    padding-top: 4rem;
+    height: 100%;
+}
+
+#aboutContent {
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    text-align: left;
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.8)
+}
+
+#aboutContent p {
+    text-indent: 3rem;
+    line-height: 2rem;
+}
+
+#navProp {
+    background-color:  rgba(0, 0, 0, 0,);
+}
+
+#navProp a {
+    margin-right: 3rem;
+}
