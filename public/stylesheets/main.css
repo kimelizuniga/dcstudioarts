@@ -16,7 +16,11 @@ a:hover {
 }
 
 h5 {
-    margin: 2rem auto;
+    margin: 3rem auto;
+}
+
+footer {
+    margin-top: 12rem;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -97,8 +101,10 @@ h5 {
 #contactContent {
     padding: 2rem 2rem;
     background-color: rgba(255, 255, 255, 0.8);
-    width: 75%;
+    height: 100%;
+    width: 50%;
     margin: 0 auto;
+    
 }
 
 #navProp a {
@@ -111,6 +117,10 @@ h5 {
 
 @media (max-width: 900px){
 
+    footer{
+        margin-top: 16rem;
+    }
+
     .navbar-brand {
         margin-left: -2rem;
     }
@@ -121,8 +131,13 @@ h5 {
     }
 
     #aboutContent, #contactContent {
-        width: 95%;
+        width: 100%;
     }
+
+    #contact {
+        height: 40rem;
+    }
+
 
     #navProp {
         text-align: left;
