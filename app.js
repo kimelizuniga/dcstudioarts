@@ -6,6 +6,12 @@ const express                   = require('express'),
 
 const url =  process.env.MONGOURL || "mongodb://localhost/portfolio";  
 
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }).then(() =>{
+    console.log("Connected to Database!");
+}).catch(err => {
+    console.log("ERROR", err.message);
+});
+
 // APP CONFIG
 
 app.set('view engine', 'ejs');
