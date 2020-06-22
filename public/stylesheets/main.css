@@ -64,7 +64,6 @@ a:hover {
     background-size: cover;
     background-position: left;  
     padding-top: 4rem;
-    height: 100%;
 }
 
 #aboutContent {
@@ -86,4 +85,13 @@ a:hover {
 
 #navProp a {
     margin-right: 3rem;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 900px){
+    #about {
+        height: 100%;
+    }
+    
 }
