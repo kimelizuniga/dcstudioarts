@@ -57,7 +57,6 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
 }
 
 #landingContent {  
@@ -131,6 +130,10 @@ footer {
 
     .navbar-brand {
         margin-left: -2rem;
+    }
+
+    #landing {
+        height: 40rem;
     }
 
     #about {
