@@ -2,13 +2,11 @@ body {
     height: 100%;
     width: 100%;
     text-align: center;
-    font-family: 'Crafty Girls', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a {
     color: black;
-    
-   
 }
 
 a:hover {
@@ -34,7 +32,7 @@ footer {
 }
 
 .pages {
-    height: 120vh;
+    height: 58rem;
 }
 
 .pages h1 {
@@ -76,7 +74,7 @@ footer {
 
 
 #landing {
-    background-image: url('https://images.unsplash.com/photo-1536173459361-69cb2a65e7e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80');
+    background-image: url('https://scontent.fybz2-1.fna.fbcdn.net/v/t1.15752-9/105950556_291846598677752_6618222457842379419_n.jpg?_nc_cat=111&_nc_sid=b96e70&_nc_ohc=5789nlL1BBIAX_1ePcl&_nc_ht=scontent.fybz2-1.fna&oh=57b4145bc16cc3b3b6da36aaaa1f1462&oe=5F1A3D41');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -91,8 +89,8 @@ footer {
 }
 
 #landingContent h1 {
-    font-size: 4rem;
-    font-family: 'Cedarville Cursive', cursive;
+    font-size: 6rem;
+    font-family: 'Crafty Girls', cursive;
 }
 
 #landingContent a {
@@ -100,7 +98,7 @@ footer {
     text-shadow: 4px 4px 4px black;
     font-weight: bold;
     font-size: 1rem;
-    font-family: 'Crafty Girls', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #landingContent a:hover {
@@ -108,10 +106,9 @@ footer {
 }
 
 #gallery {
-    background-image: url('https://images.unsplash.com/photo-1561831807-31cd5a0b78fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80');
+    background-image: url('https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/100985376_559416638110408_5014091095051599872_n.jpg?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=jjCaoSHUcwIAX_HPUUG&_nc_ht=scontent.fybz2-2.fna&oh=6004646bd1ef648604ae4536f4cdecc8&oe=5F18C22E');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50rem;
 }
 
 #gallery h1 {
@@ -125,13 +122,13 @@ footer {
 }
 
 #galleryCarousel img {
-    height: 80vh;
+    height: 40rem;
     margin: 1.5rem auto;
     width: 70%;
 }
 
 #about {
-    background-image: url('https://images.unsplash.com/photo-1564868405024-af2aa9752aac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=811&q=80');
+    background-image: url('https://scontent.fybz2-1.fna.fbcdn.net/v/t1.15752-9/105041194_941291749625933_3404644404745396140_n.jpg?_nc_cat=109&_nc_sid=b96e70&_nc_ohc=JUNUeIl8TdwAX80Dgyh&_nc_ht=scontent.fybz2-1.fna&oh=3903add19fb9fc101bd23671d0aa789c&oe=5F1A8D6E');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;  
@@ -144,8 +141,8 @@ footer {
     margin: 0 auto;
     padding: 2rem 2rem;
     text-align: left;
-    width: 40%;
-    background-color: rgba(255, 255, 255, 0.8)
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.6)
     
 }
 
@@ -158,13 +155,14 @@ footer {
 }
 
 #contact {
-    background-image: url('https://images.unsplash.com/photo-1546458887-b4d5d7e7a00b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+    background-image: url('https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/105549142_2671142903099455_419925645516961283_n.jpg?_nc_cat=105&_nc_sid=b96e70&_nc_ohc=fMp9-SS9Xv0AX9IPJpM&_nc_ht=scontent.fybz2-2.fna&oh=930cd23d8eced9ca8bfdbbbc308a2a8d&oe=5F17A388');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 4rem;
     padding-bottom: 4rem;
     font-family: 'Montserrat', sans-serif;
+    height: 100%;
 }
 
 #contact a:hover {
@@ -175,14 +173,15 @@ footer {
     padding: 2rem 2rem;
     background-color: rgba(255, 255, 255, 0.5);
     height: 100%;
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
 }
 
 #socialMedia {
     font-size: 2rem;
     width: 50%;
-    margin: 7% auto;
+    padding-top: 18rem;
+    margin: 0 auto;
 }
 
 
@@ -216,9 +215,12 @@ footer {
     }
     
     #galleryCarousel img {
-        height: 75vh;
         margin: 2rem auto;
-        width: 70%;
+        width: 100%;
+    }
+
+    #socialMedia {
+        padding-top: 18rem;
     }
 
 }
@@ -256,7 +258,7 @@ footer {
     }
 
     #contact {
-        height: 40rem;
+        height: 100%;
     }
 
 
@@ -265,7 +267,7 @@ footer {
     }
 
     #gallery {
-        height: 100vh;
+        height: 40rem;
     }
 
     #galleryCarousel {
@@ -275,9 +277,13 @@ footer {
     }
     
     #galleryCarousel img {
-        height: 60vh;
-        margin: 1rem auto;
-        width: 70%;
+        height: 22rem;
+        margin: 3rem auto;
+        width: 75%;
+    }
+
+    #socialMedia {
+        padding-top: 5rem;
     }
 
 }
