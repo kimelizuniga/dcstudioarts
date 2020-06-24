@@ -1,0 +1,29 @@
+<%- include('partials/header') %>  
+
+    <h1 class="topPad">New Gallery</h1>
+    <div class="container newGalContain">
+        <form action="/" method="POST">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input id="title" class="form-control" type="text" placeholder="title" name="title">
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input id="image" class="form-control" type="text" placeholder="image url" name="image">
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input id="price" class="form-control" type="number" placeholder="price" name="price" step='0.01'>
+            </div>
+            <div class="form-group">
+                <label for="name">Description</label>
+                <textarea id="description" class="form-control" type="text" placeholder="description" name="description"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-default btn-block btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+
+<%- include('partials/footer') %>  
