@@ -228,6 +228,7 @@ footer {
 @media (max-width: 630px){
 
     footer {
+        padding-top: 2rem;
         font-family: 'Times New Roman', Times, serif;
     }
 
@@ -283,7 +284,7 @@ footer {
     }
 
     #socialMedia {
-        padding-top: 5rem;
+        padding-top: 6rem;
     }
 
 }
