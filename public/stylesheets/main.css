@@ -110,7 +110,7 @@ footer {
 .fa-chevron-down {
     color: whitesmoke;
     font-size: 3rem;
-    margin-bottom: 120vh;
+    margin-bottom: 110vh;
     text-shadow: 3px 3px 5px black;
    animation: blinking 2s infinite;
 }
@@ -421,7 +421,7 @@ section {
     }
     
     #galleryCarousel img {
-        height:55vh;
+        height:50vh;
         width: 75vw;
     }
 
@@ -454,10 +454,6 @@ section {
     #galPrice {
         font-size: 0.8rem;
     }
-/* 
-    #galleryCarousel img {
-        width: 75%;
-    } */
 
     #galleryShow img {
        height: 60%;
