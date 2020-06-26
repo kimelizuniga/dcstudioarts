@@ -170,7 +170,6 @@ section {
 }   
 
 #galleryContent {
-    height: 100%;
     min-height: 100%;
 }
 
@@ -457,6 +456,14 @@ section {
 
     .card h5 {
         font-size: 0.9rem;
+    }
+
+    #galleryContent {
+        min-height: 50%;
+    }
+
+    #contactFooter {
+        min-height: 50%;
     }
 
     #landingContent h1 {
