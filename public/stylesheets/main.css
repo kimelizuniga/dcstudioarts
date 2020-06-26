@@ -132,6 +132,10 @@ footer {
     width: 100%;
     position: fixed;
     overflow: auto;
+    transition: height 1000000s ease;
+    -webkit-transition: height 1000000s ease;
+    -moz-transition: height 1000000s ease;
+    -o-transition: height 1000000s ease;
   
 }
 
