@@ -171,7 +171,7 @@ section {
 
 #galleryContent {
     height: 100%;
-    min-height: 90vh;
+    min-height: 100%;
 }
 
 #gallery h1 {
@@ -255,7 +255,7 @@ section {
 }
 
 #aboutFooter{
-    min-height: 90vh;
+    min-height: 100%;
 }
 
 #aboutContent h1 {
@@ -295,7 +295,7 @@ section {
 }
 
 #contactFooterDiv {
-    min-height: 90vh;
+    min-height: 100%;
 }
 
 #contactContent h1 {
