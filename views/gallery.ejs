@@ -1,6 +1,7 @@
 <%- include('partials/header') %>
 <div id="gallery">
-    <h1>Gallery</h1>
+    <div id="galleryContent">
+        <h1>Gallery</h1>
     <% if(currentUser){ %>
         <a href="/new" class="btn btn-success">Add New Gallery</a>
     <% } %>
@@ -29,10 +30,12 @@
             <% }) %> 
             
     </div>
+
+    
+    </div>
     <footer>
         <span><i class="far fa-copyright"></i> Danene Copping 2020 - All Rights Reserved</span>
     </footer>
-
 </div>
 
 <%- include('partials/footer') %>

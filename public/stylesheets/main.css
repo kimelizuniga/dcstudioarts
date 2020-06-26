@@ -110,7 +110,7 @@ footer {
 .fa-chevron-down {
     color: whitesmoke;
     font-size: 3rem;
-    margin-bottom: 110vh;
+    margin-bottom: 90vh;
     text-shadow: 3px 3px 5px black;
    animation: blinking 2s infinite;
 }
@@ -163,10 +163,16 @@ section {
     background-size: cover;
     height: 100%;
     width: 100%;
+   
     position: fixed;
     overflow: auto;
     
 }   
+
+#galleryContent {
+    height: 100%;
+    min-height: 90vh;
+}
 
 #gallery h1 {
     padding-top: 4rem;
@@ -246,7 +252,10 @@ section {
     width: 50%;
     background-color: rgba(255, 255, 255, 0.8)
     
-    
+}
+
+#aboutFooter{
+    min-height: 90vh;
 }
 
 #aboutContent h1 {
@@ -283,6 +292,10 @@ section {
     background-color: rgba(255, 255, 255, 0.6);
     width: 50%;
     margin: 0 auto;
+}
+
+#contactFooterDiv {
+    min-height: 90vh;
 }
 
 #contactContent h1 {
