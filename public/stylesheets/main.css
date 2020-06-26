@@ -458,14 +458,6 @@ section {
         font-size: 0.9rem;
     }
 
-    #galleryContent {
-        min-height: 50%;
-    }
-
-    #contactFooter {
-        min-height: 50%;
-    }
-
     #landingContent h1 {
         font-size: 3.5rem;
         margin-bottom: 10rem;
