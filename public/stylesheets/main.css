@@ -481,7 +481,10 @@ section {
         font-size: 0.9rem;
     }
 
-    
+    #contact {
+        height: 36rem;
+        position: unset;
+    }
 
     #landingContent h1 {
         font-size: 3.5rem;
