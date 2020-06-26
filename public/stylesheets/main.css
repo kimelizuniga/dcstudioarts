@@ -27,12 +27,13 @@ footer {
    padding-top: 3rem;
    padding-bottom: 1rem;
    color: whitesmoke;
+   font-size: 0.8rem;
    text-shadow: 1px 1px 1px black;
 }
 
 
 .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(78,65,59, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .custom-toggler:focus {
@@ -100,12 +101,6 @@ footer {
     50% {opacity: 1;}
     100% {opacity: 0;}
 }
-/* 
-#landingContent i {
-    animation-name: blinking;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-} */
 
 
 .fa-chevron-down {
@@ -125,7 +120,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: fixed;
    overflow: auto;
@@ -137,6 +132,7 @@ footer {
     text-shadow: 3px 3px 3px black;
     font-family: cursive;
     background-color: rgba(255,255,255,0.3);
+    height: auto;
 }
 
 section {
@@ -162,7 +158,7 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: fixed;
     overflow: auto;
@@ -231,7 +227,7 @@ section {
     background-size: cover;
     background-position: center;  
     padding-top: 5rem;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: fixed;
     overflow: auto;
@@ -267,7 +263,7 @@ section {
     background-size: cover;
     background-position: center;
     padding-top: 5rem;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: fixed;
     overflow: auto;
@@ -398,7 +394,7 @@ section {
     }
 
     .newGalContain {
-        width: 80%;
+        width: 70%;
     }
 
     #landingContent h1 {
@@ -419,7 +415,7 @@ section {
     
     #galleryCarousel img {
         height: 18rem;
-        width: 58%;
+        width: 65%;
     }
 
     
@@ -450,6 +446,10 @@ section {
 
     #galPrice {
         font-size: 0.8rem;
+    }
+
+    #galleryCarousel img {
+        width: 75%;
     }
 
     #galleryShow img {
