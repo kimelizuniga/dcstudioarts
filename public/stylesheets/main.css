@@ -486,6 +486,10 @@ section {
         height: 100%;
     }
 
+    #galleryShow {
+        height: 36rem;
+    }
+
     #contact {
         height: 36rem;
         position: unset;
