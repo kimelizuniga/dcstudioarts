@@ -236,7 +236,7 @@ section {
 }
 
 #about {
-    background-image: url('https://scontent.fybz2-1.fna.fbcdn.net/v/t1.15752-9/105041194_941291749625933_3404644404745396140_n.jpg?_nc_cat=109&_nc_sid=b96e70&_nc_ohc=JUNUeIl8TdwAX80Dgyh&_nc_ht=scontent.fybz2-1.fna&oh=3903add19fb9fc101bd23671d0aa789c&oe=5F1A8D6E');
+    background-image: url('https://images.unsplash.com/photo-1512279931422-ae1195527259?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;  
@@ -275,7 +275,7 @@ section {
 }
 
 #contact {
-    background-image: url('https://images.unsplash.com/photo-1550001437-281dcb39e26d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+    background-image: url('https://images.unsplash.com/photo-1471666875520-c75081f42081?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1138&q=80');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -291,10 +291,10 @@ section {
 }
 
 #contactContent {
-    padding: 2rem 2rem;
-    background-color: rgba(255, 255, 255, 0.6);
-    width: 50%;
-    margin: 0 auto;
+    padding-top: 5%;
+    background-color: rgba(255, 255, 255, 0.0);
+    width: 30%;
+    margin-left: 56%;
 }
 
 #contactFooterDiv {
@@ -385,8 +385,18 @@ section {
         display: none;
     }
 
-    #aboutContent, #contactContent {
+    #aboutContent{
         width: 70%;
+    }
+
+    #contactContent {
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 60%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 1rem;;
+
     }
 
     #galleryCarousel {
@@ -424,7 +434,11 @@ section {
         font-size: 4.5rem;
     }   
 
-    #aboutContent, #contactContent {
+    #contact {
+        background-position: 80%;
+    }
+
+    #aboutContent, #contactContent   {
         width: 95%;
     }
 

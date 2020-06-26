@@ -7,7 +7,7 @@
     <div class="mt-3">
         <h3>$<%= gallery.price %></h3>
         <p><%= gallery.description %></p>
-        <% let date = new Date(gallery.created_at); %>
+        <% let date = gallery.created_at; %>
         <% let d = date.getDate(); %>
         <% let m = date.getMonth() + 1; %>
         <% let y = date.getFullYear() %>
