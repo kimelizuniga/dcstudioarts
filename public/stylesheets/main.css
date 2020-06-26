@@ -62,6 +62,10 @@ footer {
     text-align: center;
 }
 
+.card-body h5 {
+    margin: 0;
+}
+
 .row {
     margin: 0;
     padding-top: 2rem;
@@ -106,7 +110,7 @@ footer {
 .fa-chevron-down {
     color: whitesmoke;
     font-size: 3rem;
-    margin-bottom: 15rem;
+    margin-bottom: 120vh;
     text-shadow: 3px 3px 5px black;
    animation: blinking 2s infinite;
 }
@@ -144,8 +148,8 @@ section {
 }
 
 #landingContent h1 {
-    padding-top: 16rem;
-    margin-bottom: 8rem;
+    padding-top: 50vh;
+    margin-bottom: 10vh;
     font-size: 8rem;
     font-family: 'Allura', cursive;
     color: whitesmoke;
@@ -211,13 +215,15 @@ section {
 #galleryCarousel {
     height: 100%;
     width: 80%;
+    padding-bottom: 0rem;
     margin: 0 auto;
+    padding-top:5rem;
 }
 
 #galleryCarousel img {
-    height: 25rem;
+    height: 80vh;
     margin: 1.5rem auto;
-    width: 60%;
+    width: 50vw;
 }
 
 #about {
@@ -356,7 +362,7 @@ section {
 
     
     .card img {
-        height: 12rem;
+        height: 9.5rem;
     }
 
     #createdAt {
@@ -369,11 +375,13 @@ section {
 
     #galleryCarousel {
         height: 100%;
+        width: 100%;
+        padding-bottom: 5rem;
     }
     
     #galleryCarousel img {
-        margin: 2rem auto;
-        width: 70%;
+        height:70vh;
+        width: 60vw;
     }
 
     #galleryShow img {
@@ -413,8 +421,8 @@ section {
     }
     
     #galleryCarousel img {
-        height: 18rem;
-        width: 65%;
+        height:55vh;
+        width: 75vw;
     }
 
     
@@ -446,10 +454,10 @@ section {
     #galPrice {
         font-size: 0.8rem;
     }
-
+/* 
     #galleryCarousel img {
         width: 75%;
-    }
+    } */
 
     #galleryShow img {
        height: 60%;

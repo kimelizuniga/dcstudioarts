@@ -13,7 +13,7 @@
     </div>
     <div class="row">
             <% galleries.forEach(function(gallery){ %>
-                <div class="col-6 col-sm-4 col-lg-2">
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                     <div class="card">
                         <% let date = new Date(gallery.created_at); %>
                         <% let d = date.getDate(); %>
@@ -23,7 +23,6 @@
                         <div class="card-body">      
                             <h5><%= gallery.title %> - <span id="galPrice">$<%= gallery.price %></span></h5>
                         </div>
-                        <p class="card-text"><%= gallery.description.substring(0, gallery.description.indexOf("", 11)) %>...</p>
                         <p id="createdAt"><%= d + '/' + m + '/' + y %></p>
                       </div>
                 </div>
