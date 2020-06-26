@@ -110,7 +110,7 @@ footer {
 .fa-chevron-down {
     color: whitesmoke;
     font-size: 3rem;
-    margin-bottom: 90vh;
+    margin-bottom: 70%;
     text-shadow: 3px 3px 5px black;
    animation: blinking 2s infinite;
 }
