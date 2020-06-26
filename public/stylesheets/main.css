@@ -121,8 +121,6 @@ footer {
 
 
 
-
-
 #landing {
     background-image: url('https://scontent.fybz2-1.fna.fbcdn.net/v/t1.15752-9/105950556_291846598677752_6618222457842379419_n.jpg?_nc_cat=111&_nc_sid=b96e70&_nc_ohc=5789nlL1BBIAX_1ePcl&_nc_ht=scontent.fybz2-1.fna&oh=57b4145bc16cc3b3b6da36aaaa1f1462&oe=5F1A3D41');
     background-repeat: no-repeat;
@@ -439,6 +437,10 @@ section {
 
     #contact {
         background-position: 80%;
+    }
+
+    #contactFooterDiv {
+        min-height: 70%;
     }
 
     #aboutContent, #contactContent   {
