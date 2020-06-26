@@ -1,22 +1,12 @@
-const viewAll           = document.getElementById('viewAll'),
-      closeButton       = document.getElementById('close'),
-      modal             = document.getElementById('myModal')
+$(document).ready(function () {
+    var scroll_pos = 0;
+    $("#landing").scroll(function () {
+        scroll_pos = $(this).scrollTop();
+        if (scroll_pos > 300) {
+            $("#landingContent").css('background-color', 'rgba(0,0,0,0.6');
+        } else {
+            $("#landingContent").css('background-color', 'rgba(255,255,255,0.3)');
+        }
+    });
+});
 
-// MODAL FUNCTION 
-
-function viewAllGallery() {
-    modal.style.display = 'block'
-}
-
-function modalNone() {
-    modal.style.display = 'none';
-}
-
-window.onclick = function(event) {
-    if(event.target == closeButton) {
-        modalNone();
-    }
-}
-
-
-viewAll.addEventListener('click', viewAllGallery)

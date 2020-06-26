@@ -129,11 +129,65 @@ app.post('/login', passport.authenticate('local',
 // LOGOUT ROUTE
 
 app.get('/logout', (req, res) => {
+    req.flash('success', 'Successfully logged out')
     req.logout();
     res.redirect('/');
 })
 
 // GALLERY ROUTE
+
+// SORT BY DATE OLDEST
+
+app.get('/gallery', (req, res)=>{
+    Gallery.find({}, (err, allGalleries)=>{
+        if(err){
+            console.log(err)
+        } else {
+            res.render('gallery', {galleries: allGalleries})
+        }
+    })
+})
+
+// SORT BY DATE NEWEST
+
+app.get('/gallery/newest', (req, res)=>{
+    Gallery.find({}, (err, allGalleries)=>{
+        if(err){
+            console.log(err)
+        } else {
+            allGalleries.sort((a, b) => b.created_at - a.created_at);
+            res.render('gallery', {galleries: allGalleries})
+        }
+    })
+})
+
+// SORT BY PRICE - HIGHEST
+
+app.get('/gallery/highest', (req, res)=>{
+    Gallery.find({}, (err, allGalleries)=>{
+        if(err){
+            console.log(err)
+        } else {
+            allGalleries.sort((a, b) => b.price - a.price);
+            res.render('gallery', {galleries: allGalleries})
+        }
+    })
+})
+
+// SORT BY PRICE - LOWEST
+
+app.get('/gallery/lowest', (req, res)=>{
+    Gallery.find({}, (err, allGalleries)=>{
+        if(err){
+            console.log(err)
+        } else {
+            allGalleries.sort((a, b) => a.price - b.price);
+            res.render('gallery', {galleries: allGalleries})
+        }
+    })
+})
+
+// ADD NEW GALLERY
 
 app.get('/new', (req,res)=>{
     app.use(function(req, res, next){
@@ -145,7 +199,7 @@ app.get('/new', (req,res)=>{
 
     if(!req.user){
         req.flash('error', 'You are not authorized to do that')
-        res.redirect('/')
+        res.redirect('/gallery')
     } else {
         res.render('new')
     }
@@ -167,9 +221,32 @@ app.post('/', (req, res)=>{
             console.log(err)
         } else {
             req.flash('Successfully added a new gallery')
-            res.redirect('/')
+            res.redirect('/gallery')
         }
     })
+})
+
+app.get('/gallery/:id', (req, res)=>{
+    
+    Gallery.findById(req.params.id).exec(function (err, foundGallery){
+        if(err){
+            console.log(err)
+        } else {
+            res.render('show', {gallery: foundGallery})
+        }
+    })
+})
+
+// ROUTE FOR ABOUT
+
+app.get('/about', (req,res) =>{
+    res.render('about')
+})
+
+// ROUTE FOR CONTACT
+
+app.get('/contact', (req,res) =>{
+    res.render('contact')
 })
 
 // ROUTE FOR SENDING EMAIL

@@ -18,9 +18,16 @@ h5 {
     margin: 3rem auto;
 }
 
+h5 span {
+    font-size: 1rem;
+}
+
 footer {
-   padding-top: 1rem;
+   font-family: 'Times New Roman', Times, serif;
+   padding-top: 3rem;
    padding-bottom: 1rem;
+   color: whitesmoke;
+   text-shadow: 1px 1px 1px black;
 }
 
 
@@ -32,16 +39,12 @@ footer {
     outline: none;  
 }
 
-.pages {
-    height: 58rem;
-}
-
-.pages h1 {
-    font-family: 'Cedarville Cursive', cursive;
-}
-
 .card {
     margin-bottom: 2rem;
+    height: 90%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.0);
+
 }
 
 .card h5 {
@@ -50,13 +53,18 @@ footer {
 }
 
 .card img {
-    height: 15rem;
+    height: 12rem;
 }
 
+
+.card-text {
+    text-align: center;
+}
 
 .row {
     margin: 0;
     padding-top: 2rem;
+    padding-bottom: 3rem;
     
 }
 
@@ -65,12 +73,50 @@ footer {
 }
 
 .topPad {      /* Adds padding for flash messages and login/sign up forms */
-    padding-top: 4rem;
+    margin-top: 4rem;
 }
 
 .newGalContain {
     width: 50%;
 }
+
+.fa-facebook-square {
+    color: #3578E5;
+    text-shadow: none;
+}
+
+.fa-instagram-square {
+    font-size:30px;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+
+}
+
+@keyframes blinking {
+    0% {opacity: 0}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+/* 
+#landingContent i {
+    animation-name: blinking;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+} */
+
+
+.fa-chevron-down {
+    color: whitesmoke;
+    font-size: 3rem;
+    margin-bottom: 15rem;
+    text-shadow: 3px 3px 5px black;
+   animation: blinking 2s infinite;
+}
+
+
 
 
 
@@ -79,41 +125,92 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+   overflow: auto;
+  
 }
 
-#landingContent {  
-    padding-top: 20rem;
-    color: white;
+
+#landingContent { 
     text-shadow: 3px 3px 3px black;
     font-family: cursive;
-    
+    background-color: rgba(255,255,255,0.3);
+}
+
+section {
+      
+   -webkit-transition: background-color 1300ms linear;
+   -moz-transition: background-color 1300ms linear;
+   -o-transition: background-color 1300ms linear;
+   -ms-transition: background-color 1300ms linear;
+   transition: background-color 1300ms linear;
 }
 
 #landingContent h1 {
-    font-size: 6rem;
-    font-family: 'Crafty Girls', cursive;
-}
-
-#landingContent a {
-    color: white;
-    text-shadow: 4px 4px 4px black;
-    font-weight: bold;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#landingContent a:hover {
-    color: black;
+    padding-top: 16rem;
+    margin-bottom: 8rem;
+    font-size: 8rem;
+    font-family: 'Allura', cursive;
+    color: whitesmoke;
+    text-shadow: 3px 3px 5px black;
 }
 
 #gallery {
     background-image: url('https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/100985376_559416638110408_5014091095051599872_n.jpg?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=jjCaoSHUcwIAX_HPUUG&_nc_ht=scontent.fybz2-2.fna&oh=6004646bd1ef648604ae4536f4cdecc8&oe=5F18C22E');
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-}
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    
+}   
 
 #gallery h1 {
     padding-top: 4rem;
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 3.5rem;
+}
+
+#gallery h5 {
+    margin: 0 auto;
+}
+
+#createdAt {
+    text-align: right;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+#createdShow {
+    font-size: 0.8rem;
+}
+
+#sort {
+    font-size: 0.9rem;
+}
+
+
+#sort p {
+    display: inline;
+}
+
+#sort h5 {
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#sortLow {
+    padding-right: 0.3rem;
+}
+
+#sortHigh {
+    border-left: 0.5px solid black;
+    padding-left: 0.5rem;
 }
 
 #galleryCarousel {
@@ -123,9 +220,9 @@ footer {
 }
 
 #galleryCarousel img {
-    height: 40rem;
+    height: 25rem;
     margin: 1.5rem auto;
-    width: 70%;
+    width: 60%;
 }
 
 #about {
@@ -133,9 +230,12 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;  
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 5rem;
     height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+  
 }
 
 #aboutContent {
@@ -143,8 +243,14 @@ footer {
     padding: 2rem 2rem;
     text-align: left;
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.6)
+    background-color: rgba(255, 255, 255, 0.8)
     
+    
+}
+
+#aboutContent h1 {
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 3.5rem;
 }
 
 #aboutContent p {
@@ -156,14 +262,15 @@ footer {
 }
 
 #contact {
-    background-image: url('https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/105549142_2671142903099455_419925645516961283_n.jpg?_nc_cat=105&_nc_sid=b96e70&_nc_ohc=fMp9-SS9Xv0AX9IPJpM&_nc_ht=scontent.fybz2-2.fna&oh=930cd23d8eced9ca8bfdbbbc308a2a8d&oe=5F17A388');
+    background-image: url('https://images.unsplash.com/photo-1550001437-281dcb39e26d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top: 4rem;
-    padding-bottom: 0rem;
-    font-family: 'Montserrat', sans-serif;
+    padding-top: 5rem;
     height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
 }
 
 #contact a:hover {
@@ -172,26 +279,36 @@ footer {
 
 #contactContent {
     padding: 2rem 2rem;
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
     width: 50%;
     margin: 0 auto;
+}
+
+#contactContent h1 {
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 3.5rem;
 }
 
 #socialMedia {
-    font-size: 2rem;
     width: 50%;
-    padding-top: 5rem;
     margin: 0 auto;
+    padding-top: 0rem;
 }
 
+#socialMedia i {
+    font-size: 2.2rem;
+
+}
 
 #navProp a {
     margin-right: 3rem;
+    color: white;
 }
 
 #signedInAs {
     margin: 0;
+    color: white;
+    margin-right: 1rem;
 }
 
 #price::-webkit-outer-spin-button,
@@ -200,63 +317,81 @@ footer {
   margin: 0;
 }
 
-/* MODAL */
+/* GALLERY SHOW */
 
-#myModal {
-    display: none;
+#galleryShow {
+    background-image: url('https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/100985376_559416638110408_5014091095051599872_n.jpg?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=jjCaoSHUcwIAX_HPUUG&_nc_ht=scontent.fybz2-2.fna&oh=6004646bd1ef648604ae4536f4cdecc8&oe=5F18C22E');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: fixed;
-    z-index: 1;
-    margin: 0 auto;
-    top: 15%;
+    height: 100%;
     width: 100%;
-    height:80%;
     overflow: auto;
-    background-color: rgba(255,255,255, 0.9);
+
 }
 
-#myModal h1{
-    padding-top: 2rem;
+#galleryShow a {
+    text-align: left;
+    font-size: 3rem;
+    width: 2rem;
+    padding-left: 5rem;
+    padding-top: 5rem;
+    display: block;
+    
 }
 
-#close {
-    margin: 1rem;
-    float: right;
+#galleryShow h1 {
+    margin-top: -4rem;
 }
 
-#close:hover {
-    color: grey;
-    cursor: pointer;
+#galleryShow img {
+    margin-top: 1rem;
+    height: 30rem;
 }
 
 /* MOBILE RESPONSIVE */
 
+
 @media (max-width: 960px){
 
+    .card h5 {
+        font-size: 0.9rem;
+    }
+
     
+    .card img {
+        height: 12rem;
+    }
+
+    #createdAt {
+        display: none;
+    }
+
     #aboutContent, #contactContent {
         width: 70%;
     }
 
     #galleryCarousel {
         height: 100%;
-        width: 80%;
-        margin: 0 auto;
     }
     
     #galleryCarousel img {
         margin: 2rem auto;
-        width: 100%;
+        width: 70%;
     }
 
-   
+    #galleryShow img {
+        width: 70%;
+    }
+
+    #galleryShow a {
+        padding-left: 1.5rem;
+    }
+
 }
 
-@media (max-width: 630px){
-
-    footer {
-        padding-top: 3rem;
-        font-family: 'Times New Roman', Times, serif;
-    }
+@media (max-width: 765px){
 
     .navbar-brand {
         margin-left: -2rem;
@@ -266,51 +401,60 @@ footer {
         width: 80%;
     }
 
-
-    #landing {
-        height: 40rem;
-    }
-
     #landingContent h1 {
-        font-size: 3rem;
-    }
-
-    #about {
-        height: 100%;
-        padding-bottom: 2rem;
-    }
+        font-size: 4.5rem;
+    }   
 
     #aboutContent, #contactContent {
         width: 95%;
     }
 
-    #contact {
-        height: 100%;
-    }
-
-
     #navProp {
         text-align: left;
     }
 
-    #gallery {
-        height: 40rem;
-    }
-
     #galleryCarousel {
-        height: 50%;
         width: 100%;
-        margin: 0 auto;
     }
     
     #galleryCarousel img {
-        height: 22rem;
-        margin: 3rem auto;
-        width: 75%;
+        height: 18rem;
+        width: 58%;
+    }
+
+    
+    #galleryShow img {
+        width: 90%;
     }
 
     #socialMedia {
-        padding-top: 6rem;
+        padding-top: 0rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .row {
+        padding-bottom: 0rem;
+    }
+
+    .card h5 {
+        font-size: 0.9rem;
+    }
+
+    #landingContent h1 {
+        font-size: 3.5rem;
+        margin-bottom: 10rem;
+    }
+
+    #galPrice {
+        font-size: 0.8rem;
+    }
+
+    #galleryShow img {
+       height: 60%;
+       width: 90%;
     }
 
 }
