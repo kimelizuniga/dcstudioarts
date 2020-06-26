@@ -481,6 +481,11 @@ section {
         font-size: 0.9rem;
     }
 
+    #gallery {
+        position: unset;
+        height: 100%;
+    }
+
     #contact {
         height: 36rem;
         position: unset;
