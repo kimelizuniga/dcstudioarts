@@ -463,7 +463,7 @@ section {
     }
 
     #landing {
-        height: 37rem;
+        height: 100vh;
     }
 
     #landingContent h1 {
