@@ -67,6 +67,8 @@ router.get('/new', middleware.isLoggedIn, (req,res)=>{
         next();
     });
 
+    res.render('gallery/new')
+
 })
 
 
