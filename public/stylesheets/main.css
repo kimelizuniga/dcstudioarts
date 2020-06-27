@@ -44,6 +44,14 @@ footer {
     outline: none;  
 }
 
+.alertFlash {
+    margin-top: 3.8rem;
+    padding-left: 2%;
+    padding-right: 3%;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
 
 .card {
     margin-bottom: 2rem;
@@ -82,8 +90,8 @@ footer {
     padding-top: 2rem;
 }
 
-.topPad {      /* Adds padding for flash messages and login/sign up forms */
-    margin-top: 4rem;
+.topPad {     
+    padding-top: 7rem;
 }
 
 .newGalContain {
@@ -180,7 +188,6 @@ section {
     background-size: cover;
     height: 100%;
     width: 100%;
-   
     position: fixed;
     overflow: auto;
     
