@@ -5,7 +5,7 @@ $(document).ready(function () {
         if (scroll_pos > 500) {
             $("#landingContent").css('background-color', 'rgba(0,0,0,0.6');
         } else {
-            $("#landingContent").css('background-color', 'rgba(255,255,255,0.3)');
+            $("#landingContent").css('background-color', 'rgba(255,255,255,0.1)');
         }
     });
 });

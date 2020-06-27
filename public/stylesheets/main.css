@@ -44,6 +44,7 @@ footer {
     outline: none;  
 }
 
+
 .card {
     margin-bottom: 2rem;
     height: 90%;
@@ -114,12 +115,26 @@ footer {
 .fa-chevron-down {
     color: whitesmoke;
     font-size: 3rem;
-    margin-bottom: 50%;
+    margin-bottom: 45%;
     text-shadow: 3px 3px 5px black;
    animation: blinking 2s infinite;
 }
 
+.fa-pencil-alt {
+    margin-right: 1rem;
+    color: green;
+}
+.fa-pencil-alt:hover {
+    color: grey;
+}
 
+.fa-trash-alt {
+    color: red;
+}
+
+.fa-trash-alt:hover {
+    color: grey;
+}
 
 #landing {
     background-image: url('https://scontent.fybz2-1.fna.fbcdn.net/v/t1.15752-9/105950556_291846598677752_6618222457842379419_n.jpg?_nc_cat=111&_nc_sid=b96e70&_nc_ohc=5789nlL1BBIAX_1ePcl&_nc_ht=scontent.fybz2-1.fna&oh=57b4145bc16cc3b3b6da36aaaa1f1462&oe=5F1A3D41');
@@ -137,7 +152,7 @@ footer {
 #landingContent { 
     text-shadow: 3px 3px 3px black;
     font-family: cursive;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.1);
 }
 
 section {
@@ -316,7 +331,7 @@ section {
 }
 
 #navProp a {
-    margin-right: 3rem;
+    margin-right: 2rem;
     color: white;
 }
 
@@ -363,6 +378,13 @@ section {
 #galleryShow img {
     margin-top: 1rem;
     height: 30rem;
+}
+
+/* DELETE IMAGE */
+
+#deleteImg {
+    width: 50%;
+    margin: 2rem auto;
 }
 
 /* MOBILE RESPONSIVE */

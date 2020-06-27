@@ -1,9 +1,9 @@
-<%- include('partials/header') %>
+<%- include('../partials/header') %>
 <div id="gallery">
     <div id="galleryContent">
         <h1>Gallery</h1>
     <% if(currentUser){ %>
-        <a href="/new" class="btn btn-success">Add New Gallery</a>
+        <a href="/gallery/new" class="btn btn-success">Add New Gallery</a>
     <% } %>
     <div id="sort">
         <h5>Sort by:</h5>
@@ -21,7 +21,9 @@
                         <% let m = date.getMonth() + 1; %>
                         <% let y = date.getFullYear() %>
                         <a href="/gallery/<%= gallery._id %>"><img class="card-img-top cardImg rounded border" src="<%= gallery.image %>" alt="Card image cap"></a>
-                        <div class="card-body">      
+                        <div class="card-body">  
+                            <a href="/gallery/<%= gallery._id %>/edit"><i class="fas fa-pencil-alt"></i></a> 
+                            <a href="/gallery/<%= gallery._id %>/delete"><i class="fas fa-trash-alt"></i></a>   
                             <h5><%= gallery.title %> - <span id="galPrice">$<%= gallery.price %></span></h5>
                         </div>
                         <p id="createdAt"><%= d + '/' + m + '/' + y %></p>
@@ -36,4 +38,4 @@
     </footer>
 </div>
 
-<%- include('partials/footer') %>
+<%- include('../partials/footer') %>

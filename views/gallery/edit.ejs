@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+    <h1 class="topPad">EDITING <%= gallery.title %></h1>
+    <div class="container newGalContain">
+        <form action="/gallery/<%=gallery._id%>?_method=PUT" method="POST">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input id="title" class="form-control" value="<%= gallery.title %>" type="text" placeholder="title" name="gallery[name]">
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input id="image" class="form-control" value="<%= gallery.image %>" type="text" placeholder="image url" name="gallery[image]">
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input id="price" class="form-control" value="<%= gallery.price %>" type="number" placeholder="price" name="gallery[price]" step='0.01'>
+            </div>
+            <div class="form-group">
+                <label for="name">Description</label>
+                <textarea id="description" class="form-control" value="<%= gallery.description %>" type="text" placeholder="description" name="gallery[description]"><%= gallery.description %></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-default btn-block btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+<%- include('../partials/footer') %>

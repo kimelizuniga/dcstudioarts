@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+<h1 class="topPad">Deleting <%= gallery.title %></h1>
+<div class="container newGalContain">
+    <h3>Are you sure you want to delete this gallery?</h3>
+    <form class="delete-form" action="/gallery/<%= gallery._id%>?_method=DELETE" method="POST">
+        <input class="btn btn-danger" type="submit" value="Delete">
+        <input class="btn btn-info" type="button" onclick="history.go(-1);" value="Back">
+    </form>
+    <img id="deleteImg" src="<%= gallery.image %>" alt="">
+</div>
+
+<%- include('../partials/footer') %>
