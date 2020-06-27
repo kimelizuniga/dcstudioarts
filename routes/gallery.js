@@ -2,7 +2,7 @@ const   express           = require("express"),
         app               = express(),
         router            = express.Router(),
         middleware        = require("../middleware"),
-        Gallery           =require('../models/gallery');
+        Gallery           = require('../models/gallery');
       
 
 // SORT BY DATE OLDEST
@@ -88,7 +88,7 @@ router.post('/', middleware.isLoggedIn, (req, res)=>{
             console.log(err)
         } else {
             req.flash('Successfully added a new gallery')
-            res.redirect('gallery/gallery')
+            res.redirect('/gallery')
         }
     })
 })
