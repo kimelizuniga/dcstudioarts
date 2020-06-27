@@ -22,8 +22,10 @@
                         <% let y = date.getFullYear() %>
                         <a href="/gallery/<%= gallery._id %>"><img class="card-img-top cardImg rounded border" src="<%= gallery.image %>" alt="Card image cap"></a>
                         <div class="card-body">  
+                            <% if(currentUser) {%>
                             <a href="/gallery/<%= gallery._id %>/edit"><i class="fas fa-pencil-alt"></i></a> 
                             <a href="/gallery/<%= gallery._id %>/delete"><i class="fas fa-trash-alt"></i></a>   
+                            <% } %>
                             <h5><%= gallery.title %> - <span id="galPrice">$<%= gallery.price %></span></h5>
                         </div>
                         <p id="createdAt"><%= d + '/' + m + '/' + y %></p>
