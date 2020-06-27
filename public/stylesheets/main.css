@@ -311,10 +311,10 @@ section {
 }
 
 #contactContent {
-    padding-top: 8%;
-    background-color: rgba(255, 255, 255, 0.0);
-    width: 30%;
-    margin-left: 56%;
+        padding-top: 8%;
+        background-color: rgba(255, 255, 255, 0.0);
+        width: 30%;
+        margin-left: 56%;
 }
 
 #contactFooterDiv {
@@ -324,6 +324,56 @@ section {
 #contactContent h1 {
     font-family: 'Annie Use Your Telescope', cursive;
     font-size: 3.5rem;
+}
+
+#testimonials {
+    background-image: url('https://images.unsplash.com/photo-1475669698648-2f144fcaaeb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+}
+
+#testimonials .btn {
+    margin-top: 5rem;
+}
+
+#testiContent {
+    margin-top: 26%;
+    margin-left: 12%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.0);
+    width: 50%;
+    color: white;
+
+}
+
+#testiContent .carousel-item {
+    text-align: left;
+    padding-left: 10rem;
+    padding-right: 8rem;
+    margin: 0 auto;
+    font-size: 2rem;
+    text-shadow: 2px 4px 3px black;
+}
+
+#testiContent h4 {
+    font-size: 2.5rem;
+}
+
+#testiContent p {
+    text-align: right;
+    margin-right: 1rem;
+}
+
+
+.fa-quote-left, .fa-quote-right {
+    font-size: 2rem;
 }
 
 #socialMedia {
@@ -397,6 +447,30 @@ section {
 /* MOBILE RESPONSIVE */
 
 
+@media (max-width: 1400px){
+
+    #testiContent {
+        margin-top: 20%;
+    }
+
+    #testiContent .carousel-item {
+        text-align: left;
+        padding-left: 5rem;
+        padding-right: 4rem;
+        margin: 0 auto;
+        font-size: 1rem;
+    }
+    
+    #testiContent h4 {
+        font-size: 1.5rem;
+    }
+    
+    #testiContent p {
+        text-align: right;
+        margin-right: 1rem;
+    }
+}
+
 @media (max-width: 960px){
 
     .card h5 {
@@ -406,6 +480,22 @@ section {
     
     .card img {
         height: 9.5rem;
+    }
+
+    #testiContent {
+        margin-top: 30%;
+        margin-left: 4%;
+        width: 60%;
+    }
+
+    #testiContent .carousel-item {
+        padding-left: 4rem;
+        padding-right: 2.5rem;
+       
+    }
+
+    #testiContent h4 {
+        font-size: 1rem;
     }
 
     #createdAt {
@@ -460,6 +550,17 @@ section {
         width: 70%;
     }
 
+    #testiContent {
+        margin-top: 45%;
+        width: 70%;
+    }
+
+    #testiContent .carousel-item {
+        padding-left: 3.2rem;
+        padding-right: 2.2rem;
+       
+    }
+
     #landingContent h1 {
         font-size: 4.5rem;
     }   
@@ -510,19 +611,29 @@ section {
         font-size: 0.9rem;
     }
 
+    #testiContent {
+        margin-top: 60%;
+        width: 90%;
+    }
+
+    #testiContent p {
+        font-size: 0.8rem;
+    }
+
+    #testiContent h4 {
+        font-size: 0.9rem;
+    }
+
+    #testiContent .carousel-item {
+        padding-left: 3rem;
+        padding-right: 2rem;
+   
+    }
+
     #gallery {
         position: unset;
         height: 100%;
     }
-/* 
-    #galleryShow {
-        height: 42rem;
-    }
-
-    #contact {
-        height: 42rem;
-        position: unset;
-    } */
 
     #landingContent h1 {
         font-size: 3.5rem;

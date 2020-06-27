@@ -57,7 +57,7 @@ router.get('/lowest', (req, res)=>{
     })
 })
 
-// ADD NEW GALLERY
+// ADD NEW GALLERY FORM
 
 router.get('/new', middleware.isLoggedIn, (req,res)=>{
 
