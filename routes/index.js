@@ -204,17 +204,14 @@ router.post('/send', (req, res) =>{
             console.log(err)
         } else {
             console.log({emails: allEmails})
-            const fullname = req.body.fullName,
-            email    = req.body.email,
-            image    = req.body.imageUpload,
-            messaged  = req.body.message
+            
 
 
         // NODE MAILER - SEND MESSAGE FROM CONTACT FORM TO SITE OWNER
 
         let transport = nodemailer.createTransport({
-            host: "smtp.mailtrap.io",
-            port: 2525,
+            host: "smtp.gmail.com",
+            port: 587,
             auth: {
             user: allEmails[0].email,
             pass: allEmails[0].password
@@ -222,10 +219,9 @@ router.post('/send', (req, res) =>{
         });
 
         const message = {
-            from: req.body.email, // Sender address
-            to: 'keaz@hotmail.ca',         // List of recipients
-            subject: `Message from: ${req.body.fullName}`, // Subject line
-            text: req.body.message, // Plain text body
+            to: allEmails[0].email,         // List of recipients
+            subject: `WEBSITE - Message from: ${req.body.fullName}`, // Subject line
+            html: `${req.body.message} <h3>Name:</h3><strong>${req.body.fullName}</strong> <h3>E-mail:</h3> ${req.body.email}` // Plain text body
         };
 
         transport.sendMail(message, function(err, info) {
