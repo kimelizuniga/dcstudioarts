@@ -1,15 +1,15 @@
 <%- include('../partials/header') %> 
 
-<h1 class="topPad">New Testimonial</h1>
+<h1 class="topPad">Edit Testimonial by <%= testimony.name %></h1>
     <div class="container newGalContain">
-        <form action="/testimonials" method="POST">
+        <form action="/testimonials/edit/<%= testimony._id %>?_method=PUT" method="POST">
             <div class="form-group">
                 <label for="quote">Testimony</label>
-                <input id="quote" class="form-control" type="text" placeholder="Testimony" name="quote">
+                <input id="quote" class="form-control" type="text" value="<%= testimony.quote %>" placeholder="Testimony" name="testimony[quote]">
             </div>
             <div class="form-group">
                 <label for="name">Name</label>
-                <input id="name" class="form-control" type="text" placeholder="Name" name="name">
+                <input id="name" class="form-control" type="text" value="<%= testimony.name %>" placeholder="Name" name="testimony[name]">
             </div>
            
             <div class="form-group">

@@ -385,6 +385,14 @@ section {
     font-size: 2rem;
 }
 
+#editAll {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+}
+
+
 #socialMedia {
     width: 50%;
     margin: 0 auto;

@@ -3,8 +3,8 @@
 <div id="testimonials">
     <% if(currentUser){ %>
         <a href="/testimonials/new" class="btn btn-success">Add New Testimonial</a>
+        <a href="testimonials/edit" class="btn btn-info">Edit Testimonials</a>
     <% } %>
-    
     <% if(testimonials.length != 0){ %>
     <div id="testiContent">
         <div id="testimonyCarousel" class="carousel slide" data-ride="carousel" date-interval="2000">
@@ -20,7 +20,7 @@
                 <div class="carousel-item">
                     <div class="d-block">
                      <h4>"<%= testimonials[i].quote %>"</h4>
-                     <p>- <%= testimonials[i].name %></p>
+                     <p>- <%= testimonials[i].name %></p>  
                     </div>
                 </div>
               <% } %>
