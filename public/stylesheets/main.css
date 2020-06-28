@@ -244,16 +244,16 @@ section {
 
 #galleryCarousel {
     height: 100%;
-    width: 80%;
+    width: 60%;
     padding-bottom: 0rem;
     margin: 0 auto;
     padding-top:5rem;
 }
 
 #galleryCarousel img {
-    height: 80vh;
+    height: 68vh;
     margin: 1.5rem auto;
-    width: 50vw;
+    width: 38vw;
 }
 
 #about {
@@ -547,12 +547,12 @@ section {
     #galleryCarousel {
         height: 100%;
         width: 100%;
-        padding-bottom: 5rem;
+        padding-top: 2rem;
     }
     
     #galleryCarousel img {
         height:70vh;
-        width: 60vw;
+        width: 50vw;
     }
 
     #galleryShow img {
@@ -606,15 +606,11 @@ section {
         text-align: left;
     }
 
-    #galleryCarousel {
-        width: 100%;
-    }
     
     #galleryCarousel img {
-        height:50vh;
-        width: 75vw;
+        height:55vh;
+        width: 60vw;
     }
-
     
     #galleryShow img {
         width: 90%;
@@ -673,5 +669,11 @@ section {
        height: 22rem;
        width: 90%;
     }
+
+    #galleryCarousel img {
+        height:45vh;
+        width: 80vw;
+    }
+
 
 }
