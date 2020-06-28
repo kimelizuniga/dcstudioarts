@@ -7,6 +7,7 @@ const   express           = require("express"),
         User              = require('../models/user'),
         Gallery           = require('../models/gallery'),
         About             = require('../models/index'),
+        Email             = require('../models/email'),
         Quote             = require('../models/quote') 
         nodemailer        = require('nodemailer'),
         passport          = require("passport");
@@ -144,47 +145,101 @@ router.put('/about/:id', middleware.isLoggedIn, (req, res) => {
 // ROUTE FOR CONTACT
 
 router.get('/contact', (req,res) =>{
-    res.render('contact')
+    Email.find({}, (err, allEmails)=>{
+        if(err){
+            console.log(err)
+        } else {
+            res.render('contact', {emails: allEmails})
+        }
+    })
+
+    
 })
+
+router.get('/contact/new', (req,res) => {
+    res.render('contact/new')
+})
+
+router.post('/contact', (req, res) => {
+    const email    = req.body.email,
+          password = req.body.password
+
+    const newEmail = {email: email, password: password}
+
+    Email.create(newEmail, (err, newCreated) => {
+        if(err){
+            console.log(err)
+        } else {
+            req.flash('success','Successfully added an email')
+            res.redirect('/contact')
+        }
+    })
+})
+
+router.get('/contact/:id/edit', middleware.isLoggedIn, (req, res)=>{
+    Email.findById(req.params.id, (err, foundEmail) => {
+        res.render('contact/edit', {email: foundEmail})
+    })
+})
+
+router.put('/contact/:id', middleware.isLoggedIn, (req, res) => {
+    Email.findByIdAndUpdate(req.params.id, req.body.email, (err, email) => {
+        if(err){
+            req.flash('error', err.message);
+            res.redirect('back');
+        } else {
+            req.flash('success','Successfully Updated!');
+            res.redirect('/contact');
+        }
+    });
+})
+
 
 // ROUTE FOR SENDING EMAIL
 
 router.post('/send', (req, res) =>{
 
-    const fullname = req.body.fullName,
-          email    = req.body.email,
-          image    = req.body.imageUpload,
-          messaged  = req.body.message
-
-
-
-    // NODE MAILER - SEND MESSAGE FROM CONTACT FORM TO SITE OWNER
-
-    let transport = nodemailer.createTransport({
-        host: "smtp.mailtrap.io",
-        port: 2525,
-        auth: {
-        user: "3dd8a09f10306f",
-        pass: "fde9f8e42f1247"
-        }
-    });
-
-    const message = {
-        from: req.body.email, // Sender address
-        to: 'keaz@hotmail.ca',         // List of recipients
-        subject: `Message from: ${req.body.fullName}`, // Subject line
-        text: req.body.message, // Plain text body
-    };
-
-    transport.sendMail(message, function(err, info) {
-        if (err) {
-        console.log(err)
+        Email.find({}, (err, allEmails)=>{
+        if(err){
+            console.log(err)
         } else {
-        console.log(info);
-        res.redirect('/')
-        }
-    });
+            console.log({emails: allEmails})
+            const fullname = req.body.fullName,
+            email    = req.body.email,
+            image    = req.body.imageUpload,
+            messaged  = req.body.message
 
+
+        // NODE MAILER - SEND MESSAGE FROM CONTACT FORM TO SITE OWNER
+
+        let transport = nodemailer.createTransport({
+            host: "smtp.mailtrap.io",
+            port: 2525,
+            auth: {
+            user: allEmails[0].email,
+            pass: allEmails[0].password
+            }
+        });
+
+        const message = {
+            from: req.body.email, // Sender address
+            to: 'keaz@hotmail.ca',         // List of recipients
+            subject: `Message from: ${req.body.fullName}`, // Subject line
+            text: req.body.message, // Plain text body
+        };
+
+        transport.sendMail(message, function(err, info) {
+            if (err) {
+            console.log(err)
+            } else {
+            console.log(info);
+            req.flash('success', 'Message sent successfully')
+            res.redirect('/contact')
+            }
+        });      
+
+        }
+    })
 })
 
 // QUOTE with IMAGE ROUTE
