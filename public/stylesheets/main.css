@@ -102,6 +102,7 @@ footer {
     width: 70%;
     margin: 0 auto;
     color: white;
+    margin-bottom: 5rem;
 }
 
 .quoteText h4 {
@@ -140,9 +141,9 @@ footer {
 .fa-chevron-down {
     color: whitesmoke;
     font-size: 3rem;
-    margin-bottom: 45%;
+    margin-bottom: 35%;
     text-shadow: 3px 3px 5px black;
-   animation: blinking 2s infinite;
+    animation: blinking 2s infinite;
 }
 
 .fa-pencil-alt {
