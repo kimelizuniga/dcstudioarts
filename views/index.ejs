@@ -3,10 +3,13 @@
 <div id="landing">
   <section id="landingContent">
     <h1>Danene Copping</h1>
-    <div>
-      <a href="/new" class="btn btn-success">Add New Quote</a>
-      <a href="/quotes" class="btn btn-info">Edit Quote</a>
-    </div>
+    <% if(currentUser){ %>
+      <div>
+        <a href="/new" class="btn btn-success">Add New Quote</a>
+        <a href="/quotes" class="btn btn-info">Edit Quote</a>
+      </div>
+    <% } %>
+    
     <a href="#carouselContent"><i class="fas fa-chevron-down"></i></a>
     
 <% if(quotes.length != 0){ %>

@@ -5,10 +5,13 @@
     <div id="aboutContent" class="rounded">
       <h1>About Me 
         <% if(currentUser){ %>
+          
         <% if(abouts.length ==  0){ %>
         <a href="/about/new"><i class="fas fa-plus"></i></a> 
         <% } %>
-        <a href="/about/<%= abouts[0].id %>/edit"><i class="fas fa-pencil-alt"></i></a>
+        <% if(abouts.length == 1){ %>
+          <a href="/about/<%= abouts[0].id %>/edit"><i class="fas fa-pencil-alt"></i></a>
+        <% } %>
         <% } %>
       </h1>
       <% if(abouts.length == 1){ %>

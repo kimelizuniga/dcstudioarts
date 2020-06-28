@@ -99,12 +99,9 @@ footer {
 }
 
 .quoteText {
-    position: absolute;
-    width: 80%;
-    bottom: 10%;
-    right: 10%;
-    background-color: rgba(255, 255, 255, 0.6);
-    text-shadow: none;
+    width: 70%;
+    margin: 0 auto;
+    color: white;
 }
 
 .quoteText h4 {
@@ -495,6 +492,10 @@ section {
 
 @media (max-width: 1400px){
 
+    .quoteText {
+        width: 85%;
+    }
+
     #testiContent {
         margin-top: 20%;
     }
@@ -659,13 +660,6 @@ section {
 
     .card h5 {
         font-size: 0.9rem;
-    }
-
-    .quoteText {
-        position: absolute;
-        width: 90%;
-        bottom: 10%;
-        right: 5%;
     }
 
     .quoteText h4 {
