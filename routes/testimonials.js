@@ -40,23 +40,23 @@ router.post('/', middleware.isLoggedIn, (req, res) => {
 
 // TESTIMONIALS EDIT PAGE
 
-router.get('/edit', (req, res) => {
+router.get('/edit', middleware.isLoggedIn, (req, res) => {
     Testimony.find({}, (err, allTestimonials)=>{
         if(err){
             console.log(err)
         } else {
-            res.render('testimonials/edits', {testimonials: allTestimonials})
+            res.render('testimonials/testimonials', {testimonials: allTestimonials})
         }
     })
 })
 
-router.get('/edit/:id/edit', (req, res)=>{
+router.get('/edit/:id/edit', middleware.isLoggedIn, (req, res)=>{
     Testimony.findById(req.params.id, (err, foundTestimony) => {
         res.render('testimonials/edit', {testimony: foundTestimony})
     })
 })
 
-router.put('/edit/:id', (req, res) => {
+router.put('/edit/:id', middleware.isLoggedIn, (req, res) => {
     Testimony.findByIdAndUpdate(req.params.id, req.body.testimony, (err, testimony) => {
         if(err){
             req.flash('error', err.message);
@@ -71,14 +71,14 @@ router.put('/edit/:id', (req, res) => {
 // DELETE TESTIMONY
 
 
-router.get('/edit/:id/delete', (req, res) => {
+router.get('/edit/:id/delete', middleware.isLoggedIn, (req, res) => {
     Testimony.findById(req.params.id, (err, foundTestimony) => {
         res.render('testimonials/delete', {testimony: foundTestimony})
     })
 })
 
-router.delete('/edit/:id', (req, res) => {
-    Testimony.findById(req.params.id, (err, gallery) => {
+router.delete('/edit/:id', middleware.isLoggedIn, (req, res) => {
+    Testimony.findById(req.params.id, (err, testimony) => {
         if(err){
             res.redirect('/testimonies/edit')
         } else {

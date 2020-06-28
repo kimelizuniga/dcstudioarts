@@ -98,6 +98,26 @@ footer {
     width: 50%;
 }
 
+.quoteText {
+    position: absolute;
+    width: 80%;
+    bottom: 10%;
+    right: 10%;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-shadow: none;
+}
+
+.quoteText h4 {
+    text-indent: 1.5rem;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.quoteText p {
+    float: right;
+    margin-right: 2rem;
+}
+
 .fa-facebook-square {
     color: #3578E5;
     text-shadow: none;
@@ -293,6 +313,15 @@ section {
     line-height: 2rem;
     font-weight: bold;
   
+}
+
+#about .fas {
+    font-size: 1.5rem;
+    color: green;
+}
+
+#about i:hover {
+    color: black;
 }
 
 #contact {
@@ -630,6 +659,21 @@ section {
 
     .card h5 {
         font-size: 0.9rem;
+    }
+
+    .quoteText {
+        position: absolute;
+        width: 90%;
+        bottom: 10%;
+        right: 5%;
+    }
+
+    .quoteText h4 {
+        font-size: 0.9rem;
+    }
+
+    .quoteText p {
+        font-size: 0.7rem;
     }
 
     #testiContent {

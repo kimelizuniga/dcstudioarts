@@ -1,10 +1,14 @@
+const { route } = require("./testimonials");
+
 const   express           = require("express"),
         app               = express(),
         router            = express.Router(),
         middleware = require("../middleware"),
         User              = require('../models/user'),
-        Gallery                   =require('../models/gallery'),
-        nodemailer                = require('nodemailer'),
+        Gallery           = require('../models/gallery'),
+        About             = require('../models/index'),
+        Quote             = require('../models/quote') 
+        nodemailer        = require('nodemailer'),
         passport          = require("passport");
 
 
@@ -19,11 +23,11 @@ router.get('/', (req,res)=>{
         next();
     });
 
-    Gallery.find({}, (err, allGalleries)=>{
+    Quote.find({}, (err, allQuotes)=>{
         if(err){
             console.log(err)
         } else {
-            res.render('index', {galleries: allGalleries})
+            res.render('index', {quotes: allQuotes})
         }
     })
 })
@@ -80,7 +84,7 @@ router.post('/login', passport.authenticate('local',
 
 // LOGOUT ROUTE
 
-router.get('/logout', (req, res) => {
+router.get('/logout', middleware.isLoggedIn, (req, res) => {
     req.flash('success', 'Successfully logged out')
     req.logout();
     res.redirect('/');
@@ -89,8 +93,53 @@ router.get('/logout', (req, res) => {
 // ROUTE FOR ABOUT
 
 router.get('/about', (req,res) =>{
-    res.render('about')
+    About.find({}, (err, allAbout)=>{
+        if(err){
+            console.log(err)
+        } else {
+            res.render('about', {abouts: allAbout})
+        }
+    })
 })
+
+router.get('/about/new', (req,res) =>{
+    res.render('about/new')
+})
+
+router.post('/about', middleware.isLoggedIn, (req, res) => {
+    
+    const about = req.body.about
+
+    const newAbout = {about: about}
+
+    About.create(newAbout, (err, newCreated) => {
+        if(err){
+            console.log(err)
+        } else {
+            req.flash('success','Successfully added about info')
+            res.redirect('/about')
+        }
+    })
+})
+
+router.get('/about/:id/edit', middleware.isLoggedIn, (req, res)=>{
+    About.findById(req.params.id, (err, foundAbout) => {
+        res.render('about/edit', {about: foundAbout})
+    })
+})
+
+router.put('/about/:id', middleware.isLoggedIn, (req, res) => {
+    About.findByIdAndUpdate(req.params.id, req.body.about, (err, about) => {
+        if(err){
+            req.flash('error', err.message);
+            res.redirect('back');
+        } else {
+            req.flash('success','Successfully Updated!');
+            res.redirect('/about');
+        }
+    });
+})
+
 
 // ROUTE FOR CONTACT
 
@@ -137,5 +186,84 @@ router.post('/send', (req, res) =>{
     });
 
 })
+
+// QUOTE with IMAGE ROUTE
+
+// NEW QUOTE
+
+router.get('/new', (req, res) => {
+    res.render('landing/new')
+})
+
+router.post('/', middleware.isLoggedIn, (req, res) => {
+    const image = req.body.image,
+          quote = req.body.quote,
+          name  = req.body.name
+
+    const newQuote = {image: image, quote: quote, name: name}  
+    
+    Quote.create(newQuote, (err, newCreated) => {
+        if(err){
+            console.log(err)
+        } else {
+            req.flash('success','Successfully added a new quote')
+            res.redirect('/')
+        }
+    })
+})
+
+// EDIT QUOTE
+
+// EDIT QUOTE PAGE
+
+router.get('/quotes', (req, res) => {
+    Quote.find({}, (err, allQuotes)=>{
+        if(err){
+            console.log(err)
+        } else {
+            res.render('landing/quote', {quotes: allQuotes})
+        }
+    })
+})
+
+router.get('/quotes/:id/edit', middleware.isLoggedIn, (req, res)=>{
+    Quote.findById(req.params.id, (err, foundQuote) => {
+        res.render('landing/edit', {quote: foundQuote})
+    })
+})
+
+router.put('/quotes/:id', middleware.isLoggedIn, (req, res) => {
+    Quote.findByIdAndUpdate(req.params.id, req.body.quote, (err, quote) => {
+        if(err){
+            req.flash('error', err.message);
+            res.redirect('back');
+        } else {
+            req.flash('success','Successfully Updated!');
+            res.redirect('/quotes');
+        }
+    });
+})
+
+// DELETE TESTIMONY
+
+
+router.get('/quotes/:id/delete', middleware.isLoggedIn, (req, res) => {
+    Quote.findById(req.params.id, (err, foundQuote) => {
+        res.render('landing/delete', {quote: foundQuote})
+    })
+})
+
+router.delete('/quotes/:id', middleware.isLoggedIn, (req, res) => {
+    Quote.findById(req.params.id, (err, quote) => {
+        if(err){
+            res.redirect('/quotes')
+        } else {
+            quote.remove();
+            req.flash('success', 'Quote removed successfully')
+            res.redirect('/quotes')
+        }
+    })
+})
+
 
 module.exports = router;

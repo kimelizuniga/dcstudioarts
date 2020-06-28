@@ -1,7 +1,10 @@
 <%- include('../partials/header') %>
 
 <div id="editAll" class="topPad">
-    <input class="btn btn-info float-left ml-3" type="button" onclick="history.go(-1);" value="Back">
+    <div class="d-inline-block mb-2">
+        <a href="/testimonials" class="btn btn-info ml-3">Back</a>
+        <a href="/testimonials/new" class="btn btn-success ml-2">Add Testimonial</a>
+    </div>
     <h1>Edit Testimonials</h1>
     <div class="row">
     <% testimonials.forEach(function(testimony){ %>
