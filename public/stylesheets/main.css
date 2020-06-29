@@ -6,11 +6,9 @@ html, body {
 body {
     height: 100%;
     width: 100%;
-    min-height: 100%;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     position: relative;
-    overflow: auto;
 }
 
 a {
@@ -32,18 +30,14 @@ h5 span {
 
 footer {
    font-family: 'Times New Roman', Times, serif;
-   /* padding-top: 0rem;
-   padding-bottom: 1rem; */
    color: whitesmoke;
    font-size: 0.8rem;
    text-shadow: 1px 1px 1px black;
-   position: sticky;
-   bottom: 0px;
-   margin-right: auto;
-   margin-left: auto;
-   left: 0px;
-   right: 0px;
-}
+   width: 100%;
+   max-width: 600px;
+   margin: 0rem auto;
+   padding-top: 0.5rem;
+} 
 
 
 .custom-toggler .navbar-toggler-icon {
@@ -54,7 +48,15 @@ footer {
     outline: none;  
 }
 
+.topPad {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
+.content {
+    flex-grow: 1;
+}
 
 .alertFlash {
     margin-top: 3.8rem;
@@ -184,24 +186,23 @@ footer {
     width: 100%;
     position: fixed;
     overflow: auto;
-
+    display: flex;
+    flex-direction: column; 
 }
 
 #landingContent { 
     text-shadow: 3px 3px 3px black;
+    flex-grow: 1;
     background-color: rgba(255,255,255,0.1);
+    -webkit-transition: background-color 1300ms linear;
+    -moz-transition: background-color 1300ms linear;
+    -o-transition: background-color 1300ms linear;
+    -ms-transition: background-color 1300ms linear;
+    transition: background-color 1300ms linear;
 }
 
-section {
-      
-   -webkit-transition: background-color 1300ms linear;
-   -moz-transition: background-color 1300ms linear;
-   -o-transition: background-color 1300ms linear;
-   -ms-transition: background-color 1300ms linear;
-   transition: background-color 1300ms linear;
-}
 
-#landingContent h1 {
+#landing h1 {
     padding-top: 50vh;
     margin-bottom: 10vh;
     font-size: 8rem;
@@ -215,15 +216,16 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* height: 100%;
+    height: 100%;
     width: 100%;
-    position: fixed; */
+    position: fixed;
     overflow: auto;
-    
+    display: flex;
+    flex-direction: column;
 }   
 
 #galleryContent {
-    min-height: 98vh;
+    flex-grow: 1;
 }
 
 #gallery h1 {
@@ -259,7 +261,6 @@ section {
 #sort h5 {
     font-size: 1rem;
     margin-top: 2rem;
-    margin-bottom: 1rem;
 }
 
 #sortLow {
@@ -295,7 +296,8 @@ section {
     width: 100%;
     position: fixed;
     overflow: auto;
-  
+    display: flex;
+    flex-direction: column;
 }
 
 #aboutContent {
@@ -303,13 +305,8 @@ section {
     padding: 2rem 2rem;
     text-align: left;
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.8)
-    
-}
-
-#aboutFooter{
-    min-height: 92vh;
-    position: static;
+    background-color: rgba(255, 255, 255, 0.8);
+    flex-grow: 1;
 }
 
 #aboutContent h1 {
@@ -322,7 +319,6 @@ section {
     text-indent: 3rem;
     line-height: 2rem;
     font-weight: bold;
-  
 }
 
 #about .fas {
@@ -344,6 +340,8 @@ section {
     width: 100%;
     position: fixed;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #contact a:hover {
@@ -359,14 +357,7 @@ section {
         background-color: rgba(255, 255, 255, 0.0);
         width: 30%;
         margin-left: 56%;
-}
-
-#contactFooterDiv {
-    min-height: 97vh;
-}
-
-#contactFooter {
-    position: static;
+        flex-grow: 1;
 }
 
 #contactContent h1 {
@@ -383,6 +374,8 @@ section {
     width: 100%;
     position: fixed;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #testimonials .btn {
@@ -397,7 +390,7 @@ section {
     background-color: rgba(255, 255, 255, 0.0);
     width: 50%;
     color: white;
-
+    flex-grow: 1;
 }
 
 #testiContent .carousel-item {
@@ -416,16 +409,6 @@ section {
 #testiContent p {
     text-align: right;
     margin-right: 1rem;
-}
-
-#testimonyFooter {
-    width: 100%;
-    max-width: 600px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
 }
 
 .fa-quote-left, .fa-quote-right {
@@ -451,9 +434,7 @@ section {
     padding-bottom: 2rem;
 }
 
-#socialMedia footer {
-    position: static;
-}
+
 
 
 #navProp a {
@@ -488,7 +469,8 @@ section {
     height: 100%;
     width: 100%;
     overflow: auto;
-
+    display: flex;
+    flex-direction: column;
 }
 
 #galleryTop {
@@ -509,10 +491,6 @@ section {
 #galleryShow img {
     margin-top: 1rem;
     height: 30rem;
-}
-
-#showFooter {
-    position: static;
 }
 
 /* DELETE IMAGE */
@@ -562,14 +540,6 @@ section {
     #testiContent p {
         text-align: right;
         margin-right: 1rem;
-    }
-
-    #aboutFooter{
-        min-height: 84.5vh;
-    }
-
-    #contactFooterDiv {
-        min-height: 94vh;
     }
 }
 
@@ -625,10 +595,6 @@ section {
 
     }
 
-    #contactFooterDiv {
-        min-height: 83.5vh;
-    }
-
     #galleryCarousel {
         height: 100%;
         width: 100%;
@@ -677,10 +643,6 @@ section {
 
     #contact {
         background-position: 80%;
-    }
-
-    #contactFooterDiv {
-        min-height: 83.5vh;
     }
 
     #aboutContent, #contactContent   {
@@ -767,16 +729,5 @@ section {
         height:45vh;
         width: 80vw;
     }
-
-    #contactFooterDiv {
-        min-height: 82.5vh;
-        position: static;
-    }
-
-    #aboutFooter{
-        min-height: 83.5vh;
-        position: static;
-    }
-
 
 }

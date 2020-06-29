@@ -1,27 +1,30 @@
 <%- include('../partials/header') %>  
 
-    <h1 class="topPad">New E-Mail</h1>
-    <div class="container newGalContain">
-        <form action="/contact" method="POST">
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input id="email" class="form-control" type="text" placeholder="e-mail" name="email">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input id="password" class="form-control" type="password" placeholder="" name="password">
-            </div>
-            <div class="form-group">
-                <label for="confirm_password">Confirm Password</label>
-                <input id="confirm_password" class="form-control" type="password" placeholder="" name="confirm">
-                <p class="pt-2" id="message"></p>
-            </div>
-            <div class="form-group">
-                <input id="emailPassword" class="btn btn-success" type="submit" value="Submit" disabled="disabled">
-                <input class="btn btn-info" type="button" onclick="history.go(-1);" value="Back">
-            </div>
-        </form>
+<div class="container topPad">
+    <div class="content">
+        <h1>New E-Mail</h1>
+        <div class="container newGalContain">
+            <form action="/contact" method="POST">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input id="email" class="form-control" type="text" placeholder="e-mail" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" class="form-control" type="password" placeholder="" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input id="confirm_password" class="form-control" type="password" placeholder="" name="confirm">
+                    <p class="pt-2" id="message"></p>
+                </div>
+                <div class="form-group">
+                    <input id="emailPassword" class="btn btn-success" type="submit" value="Submit" disabled="disabled">
+                    <input class="btn btn-info" type="button" onclick="history.go(-1);" value="Back">
+                </div>
+            </form>
+        </div>
     </div>
+</div>
     
-
 <%- include('../partials/footer') %>  

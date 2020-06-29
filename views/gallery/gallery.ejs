@@ -2,55 +2,44 @@
 <div id="gallery">
     <div id="galleryContent">
         <h1>Gallery</h1>
-    <div id="sort">
-        <h5>Sort by:</h5>
-        <p>Date: <a href="/gallery/oldest">Oldest - </a></p>
-        <a id="sortLow" href="/gallery">Newest</a>
-        <p id="sortHigh">Price: <a href="/gallery/highest"> Highest - </a></p>
-        <a href="/gallery/lowest"> Lowest</a>
-    </div>
-    <div class="row">
-            <% galleries.forEach(function(gallery){ %>
-                <div class="col-6 col-sm-4 col-lg-3 col-xl-2 mb-3">
-                    <div class="card wordBreak h-100">
-                        <% let date = gallery.created_at; %>
-                        <% let d = date.getDate(); %>
-                        <% let m = date.getMonth() + 1; %>
-                        <% let y = date.getFullYear() %>
-                        <a href="/gallery/<%= gallery._id %>"><img class="card-img-top cardImg rounded border" src="<%= gallery.image %>" alt="Card image cap"></a>
-                        <div class="card-body">  
-                            <% if(currentUser) {%>
-                            <a href="/gallery/<%= gallery._id %>/edit"><i class="fas fa-pencil-alt"></i></a> 
-                            <a href="/gallery/<%= gallery._id %>/delete"><i class="fas fa-trash-alt"></i></a>   
-                            <% } %>
-                            <h5><%= gallery.title %> - 
-                                <span id="galPrice">
-                                    <% if( gallery.price > 0) { %>
-                                    $
-                                    <% } %>
-                                    <% if( gallery.price.replace(/^\s*/, "") == ""){ %>
-                                        N/A
-                                    <% } %>
-                                    <%= gallery.price %>
-                                </span>
-                            </h5>
-                        </div>
+        <div id="sort">
+            <h5>Sort by:</h5>
+            <p>Date: <a href="/gallery/oldest">Oldest - </a></p>
+            <a id="sortLow" href="/gallery">Newest</a>
+            <p id="sortHigh">Price: <a href="/gallery/highest"> Highest - </a></p>
+            <a href="/gallery/lowest"> Lowest</a>
+        </div>
+        <div class="row">
+                <% galleries.forEach(function(gallery){ %>
+                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2 mt-3">
+                        <div class="card wordBreak h-100">
+                            <% let date = gallery.created_at; %>
+                            <% let d = date.getDate(); %>
+                            <% let m = date.getMonth() + 1; %>
+                            <% let y = date.getFullYear() %>
+                            <a href="/gallery/<%= gallery._id %>"><img class="card-img-top cardImg rounded border" src="<%= gallery.image %>" alt="Card image cap"></a>
+                            <div class="card-body">  
+                                <% if(currentUser) {%>
+                                <a href="/gallery/<%= gallery._id %>/edit"><i class="fas fa-pencil-alt"></i></a> 
+                                <a href="/gallery/<%= gallery._id %>/delete"><i class="fas fa-trash-alt"></i></a>   
+                                <% } %>
+                                <h5><%= gallery.title %> - 
+                                    <span id="galPrice">
+                                        <% if( gallery.price > 0) { %>
+                                        $
+                                        <% } %>
+                                        <% if( gallery.price.replace(/^\s*/, "") == ""){ %>
+                                            N/A
+                                        <% } %>
+                                        <%= gallery.price %>
+                                    </span>
+                                </h5>
+                            </div>
                         <p id="createdAt"><%= d + '/' + m + '/' + y %></p>
-                      </div>
+                     </div>
                 </div>
             <% }) %> 
-            
-            </div>
-            
+        </div>
     </div>
-    <footer id="galleryFooter">
-        <span><i class="far fa-copyright"></i> Danene Copping 2020 - All Rights Reserved</span>
-    </footer>
-</div>
-
-
-
-
-
 
 <%- include('../partials/footer') %>

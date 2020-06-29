@@ -1,22 +1,26 @@
 <%- include('../partials/header') %> 
 
-<h1 class="topPad">Edit Testimonial by <%= testimony.name %></h1>
-    <div class="container newGalContain">
-        <form action="/testimonials/edit/<%= testimony._id %>?_method=PUT" method="POST">
-            <div class="form-group">
-                <label for="quote">Testimony</label>
-                <input id="quote" class="form-control" type="text" value="<%= testimony.quote %>" placeholder="Testimony" name="testimony[quote]">
-            </div>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input id="name" class="form-control" type="text" value="<%= testimony.name %>" placeholder="Name" name="testimony[name]">
-            </div>
-           
-            <div class="form-group">
-                <input class="btn btn-success" type="submit" value="Submit">
-                <input class="btn btn-info" type="button" onclick="history.go(-1);" value="Back">
-            </div>
-        </form>
+<div class="container topPad">
+    <div class="content">
+        <h1>Edit Testimonial by <%= testimony.name %></h1>
+        <div class="container newGalContain">
+            <form action="/testimonials/edit/<%= testimony._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <label for="quote">Testimony</label>
+                    <input id="quote" class="form-control" type="text" value="<%= testimony.quote %>" placeholder="Testimony" name="testimony[quote]">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input id="name" class="form-control" type="text" value="<%= testimony.name %>" placeholder="Name" name="testimony[name]">
+                </div>
+            
+                <div class="form-group">
+                    <input class="btn btn-success" type="submit" value="Submit">
+                    <input class="btn btn-info" type="button" onclick="history.go(-1);" value="Back">
+                </div>
+            </form>
+        </div>
     </div>
+</div>
     
 <%- include('../partials/footer') %> 

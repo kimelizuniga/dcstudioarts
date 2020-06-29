@@ -1,14 +1,18 @@
 <%- include('../partials/header') %>
 
-<h1 class="topPad">Deleting quote by - <%= quote.name %></h1>
-<div class="container newGalContain">
-    <h3>Are you sure you want to delete this quote?</h3>
-    <form class="delete-form" action="/quotes/<%= quote._id%>?_method=DELETE" method="POST">
-        <input class="btn btn-danger" type="submit" value="Delete">
-        <input class="btn btn-info" type="button" onclick="history.go(-1);" value="Back">
-    </form>
-    <img id="deleteImg" src="<%= quote.image %>" alt="">
-    <p>"<%= quote.quote %>"</p>
+<div class="container topPad">
+    <div class="content">
+        <h1>Deleting quote by - <%= quote.name %></h1>
+        <div class="container newGalContain">
+            <h3>Are you sure you want to delete this quote?</h3>
+            <form class="delete-form" action="/quotes/<%= quote._id%>?_method=DELETE" method="POST">
+                <input class="btn btn-danger" type="submit" value="Delete">
+                <input class="btn btn-info" type="button" onclick="history.go(-1);" value="Back">
+            </form>
+            <img id="deleteImg" src="<%= quote.image %>" alt="">
+            <p>"<%= quote.quote %>"</p>
+        </div>
+    </div>
 </div>
 
 <%- include('../partials/footer') %>
