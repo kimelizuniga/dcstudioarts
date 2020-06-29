@@ -770,10 +770,12 @@ section {
 
     #contactFooterDiv {
         min-height: 82.5vh;
+        position: static;
     }
 
     #aboutFooter{
         min-height: 83.5vh;
+        position: static;
     }
 
 
