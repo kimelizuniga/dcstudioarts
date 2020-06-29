@@ -33,7 +33,7 @@ router.post('/', middleware.isLoggedIn, (req, res) => {
             console.log(err)
         } else {
             req.flash('success','Successfully added a new testimony')
-            res.redirect('/testimonials')
+            res.redirect('/testimonials/edit')
         }
     })
 })
@@ -80,9 +80,9 @@ router.get('/edit/:id/delete', middleware.isLoggedIn, (req, res) => {
 router.delete('/edit/:id', middleware.isLoggedIn, (req, res) => {
     Testimony.findById(req.params.id, (err, testimony) => {
         if(err){
-            res.redirect('/testimonies/edit')
+            res.redirect('/testimonials/edit')
         } else {
-            gallery.remove();
+            testimony.remove();
             req.flash('success', 'Testimony removed successfully')
             res.redirect('/testimonials/edit')
         }

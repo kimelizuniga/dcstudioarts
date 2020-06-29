@@ -3,13 +3,6 @@
 <div id="landing">
   <section id="landingContent">
     <h1>Danene Copping</h1>
-    <% if(currentUser){ %>
-      <div>
-        <a href="/new" class="btn btn-success">Add New Quote</a>
-        <a href="/quotes" class="btn btn-info">Edit Quote</a>
-      </div>
-    <% } %>
-    
     <a href="#carouselContent"><i class="fas fa-chevron-down"></i></a>
     
 <% if(quotes.length != 0){ %>
@@ -50,13 +43,15 @@
   <div id="socialMedia">
     <a class="mr-2" href="https://www.facebook.com/dc.studioartist.1" target="_blank"><i class="fab fa-facebook-square"></i></a>
     <a href="https://www.instagram.com/dcstudioartist/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+    <footer id="landingFooter">
+      <span><i class="far fa-copyright"></i> Danene Copping 2020 - All Rights Reserved</span>
+    </footer>
   </div>
-  <footer id="landingFooter">
-    <span><i class="far fa-copyright"></i> Danene Copping 2020 - All Rights Reserved</span>
-  </footer>
+  
   </div>
   
 </section>
+
 
 </div>
 

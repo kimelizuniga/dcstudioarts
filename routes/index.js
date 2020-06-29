@@ -6,6 +6,7 @@ const   express           = require("express"),
         middleware = require("../middleware"),
         User              = require('../models/user'),
         Gallery           = require('../models/gallery'),
+        Testimony         = require('../models/testimonials'),
         About             = require('../models/index'),
         Email             = require('../models/email'),
         Quote             = require('../models/quote') 
@@ -69,7 +70,7 @@ router.get('/login', (req,res) => {
         res.render('login')
     } else {
         req.flash('error', 'Already logged in')
-        return res.redirect('/')
+        return res.redirect('/dashboard')
     }
     
 })
@@ -80,7 +81,7 @@ router.post('/login', passport.authenticate('local',
     failureFlash: true
     }), (req, res) => {
         req.flash('success', 'Welcome Danene Copping');
-        res.redirect('/')
+        res.redirect('/dashboard')
         });
 
 // LOGOUT ROUTE
@@ -299,7 +300,7 @@ router.put('/quotes/:id', middleware.isLoggedIn, (req, res) => {
 
 
 router.get('/quotes/:id/delete', middleware.isLoggedIn, (req, res) => {
-    Quote.findById(req.params.id, (err, foundQuote) => {
+    Quote.findById(req.params.id,    (err, foundQuote) => {
         res.render('landing/delete', {quote: foundQuote})
     })
 })
@@ -312,6 +313,49 @@ router.delete('/quotes/:id', middleware.isLoggedIn, (req, res) => {
             quote.remove();
             req.flash('success', 'Quote removed successfully')
             res.redirect('/quotes')
+        }
+    })
+})
+
+// ROUTE FOR DASHBOARD
+
+router.get('/dashboard', middleware.isLoggedIn, (req,res) => {
+
+    Quote.find({}, (err, allQuotes)=>{
+        if(err){
+            console.log(err)
+        } else {
+            Gallery.find({}, (err, allGalleries)=>{
+                if(err){
+                    console.log(err)
+                } else {
+                    Testimony.find({}, (err, allTestimonials)=>{
+                        if(err){
+                            console.log(err)
+                        } else {
+                            About.find({}, (err, allAbouts) =>{
+                                if(err){
+                                    console.log(err)
+                                } else {
+                                Email.find({}, (err, allEmails)=>{
+                                    if(err){
+                                        console.log(err)
+                                    } else {
+                                        res.render('dashboard',{
+                                            quotes: allQuotes,
+                                            galleries: allGalleries,
+                                            abouts: allAbouts,
+                                            emails: allEmails,
+                                            testimonials: allTestimonials
+                                        })
+                                    }
+                                })    
+                              }
+                            }) 
+                        }
+                    })
+                }
+            })
         }
     })
 })

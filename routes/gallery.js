@@ -8,7 +8,7 @@ const   express           = require("express"),
 
 // SORT BY DATE OLDEST
 
-router.get('/', (req, res)=>{
+router.get('/oldest', (req, res)=>{
     Gallery.find({}, (err, allGalleries)=>{
         if(err){
             console.log(err)
@@ -20,7 +20,7 @@ router.get('/', (req, res)=>{
 
 // SORT BY DATE NEWEST
 
-router.get('/newest', (req, res)=>{
+router.get('/', (req, res)=>{
     Gallery.find({}, (err, allGalleries)=>{
         if(err){
             console.log(err)

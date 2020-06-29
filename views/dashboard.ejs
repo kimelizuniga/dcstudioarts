@@ -1,0 +1,76 @@
+<%- include('partials/header') %>
+
+<div class="container topPad">
+    <h1>Dashboard</h1>
+    <div class="row border round mb-3">
+        <div class="col-12 col-lg-2">
+            <h3>Quotes</h3>
+            <div class="border mb-2 pl-1 pt-2 text-left">
+                <p>Total: <%= quotes.length %></p>
+                <div class="dashBtns">
+                    <a href="/new" class="btn btn-success">Add</a>
+                    <a href="/quotes" class="btn btn-info">Edit</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-2">
+            <h3>Galleries</h3>
+            <div class="border mb-2 pl-1 pt-2 text-left">
+                <p>Total: <%= galleries.length %></p>
+                <div class="dashBtns">
+                    <a href="/gallery/new" class="btn btn-success">Add</a>
+                    <a href="/gallery" class="btn btn-info">Edit</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <h3>Testimonials</h3>
+            <div class="border mb-2 pl-1 pt-2 text-left">
+                <p>Total: <%= testimonials.length %></p>
+                <div class="dashBtns">
+                    <a href="/testimonials/new" class="btn btn-success">Add</a>
+                    <a href="/testimonials/edit" class="btn btn-info">Edit</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-2">
+            <h3>About</h3>
+            <div class="border mb-2 pl-1 pt-2 text-left">
+                <div class="dashBtns mb-2">
+                    <% if(abouts.length ==  0){ %>
+                        <a href="/about/new"><i class="fas fa-plus"></i></a> 
+                    <% } %>
+                    <% if(abouts.length == 1){ %>
+                        <a href="/about/<%= abouts[0].id %>/edit"><i class="fas fa-pencil-alt"></i></a>
+                    <% } %>
+                </div>
+                <% if(abouts.length == 1){ %>
+                    <p><%= abouts[0].about.substring(0, abouts[0].about.indexOf(' ', 25)) %>...</p>
+                <% } else {%>
+                    <p>No 'about' information yet</p>
+                <% } %>
+            </div>
+        </div>
+        <div class="col-12 col-lg-2 mb-2">
+            <h3>Contact</h3>
+            <div class="border mb-2 pl-1 pt-2 text-left">
+                <div class="dashBtns mb-2">
+                    <% if(emails.length ==  0){ %>
+                        <a href="/contact/new"><i class="fas fa-plus"></i></a> 
+                    <% } %>
+                    <% if(emails.length == 1){ %>
+                        <a href="/contact/<%= emails[0]._id %>/edit"><i class="fas fa-pencil-alt"></i></a>
+                    <% } %>
+                </div>
+                <% if(emails.length == 1){ %>
+                <p class="wordBreak">E-mail: <%= emails[0].email %></p>
+                <% } else {%>
+                <p>No E-mail assigned yet</p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('partials/footer') %>

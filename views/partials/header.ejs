@@ -13,7 +13,7 @@
   <div class="container">
     <nav id="navProp" class="navbar fixed-top navbar-expand-lg bg-dark">
       <% if(currentUser){ %>
-        <p id="signedInAs">Signed in as: <%= currentUser.username %> </p>
+        <p id="signedInAs">Signed in as: <a href="/dashboard"><%= currentUser.username %></a> </p>
         <a id="logout" href="/logout">Logout</a>
       <% } else { %>
         <a class="navbar-brand pl-5" href="/">DCStudioArtist</a>
@@ -26,6 +26,11 @@
           <li class="nav-item" data-target="#navbarNav">
             <a class="nav-link"  href="/">Home <span class="sr-only">(current)</span></a>
           </li>
+          <% if(currentUser){ %>
+            <li class="nav-item" data-target="#navbarNav">
+              <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+          <% } %>
           <li class="nav-item" data-target="#navbarNav">
             <a class="nav-link" href="/gallery">Galleries</a>
           </li>

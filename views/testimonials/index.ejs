@@ -1,10 +1,6 @@
 <%- include('../partials/header') %>
 
 <div id="testimonials">
-    <% if(currentUser){ %>
-        <a href="/testimonials/new" class="btn btn-success">Add Testimonial</a>
-        <a href="/testimonials/edit" class="btn btn-info">Edit Testimonials</a>
-    <% } %>
     <% if(testimonials.length != 0){ %>
     <div id="testiContent">
         <div id="testimonyCarousel" class="carousel slide" data-ride="carousel" date-interval="2000">
@@ -44,8 +40,9 @@
           
 </div>
 <footer id="testimonyFooter">
-    <span><i class="far fa-copyright"></i> Danene Copping 2020 - All Rights Reserved</span>
-</footer>
+  <span><i class="far fa-copyright"></i> Danene Copping 2020 - All Rights Reserved</span>
+</footer>  
+
 
 
 
