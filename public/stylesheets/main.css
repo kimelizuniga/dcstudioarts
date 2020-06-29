@@ -308,7 +308,7 @@ section {
 }
 
 #aboutFooter{
-    min-height: 90vh;
+    min-height: 92vh;
     position: static;
 }
 
@@ -362,7 +362,7 @@ section {
 }
 
 #contactFooterDiv {
-    min-height: 96vh;
+    min-height: 97vh;
 }
 
 #contactFooter {
@@ -491,23 +491,28 @@ section {
 
 }
 
+#galleryTop {
+    padding-top: 5rem;
+}
+
 #galleryShow a {
     text-align: left;
+    margin-left: 5%;
     font-size: 3rem;
-    width: 2rem;
-    padding-left: 5rem;
-    padding-top: 5rem;
     display: block;
-    
 }
 
 #galleryShow h1 {
-    margin-top: -4rem;
+    display: inline;
 }
 
 #galleryShow img {
     margin-top: 1rem;
     height: 30rem;
+}
+
+#showFooter {
+    position: static;
 }
 
 /* DELETE IMAGE */
@@ -560,11 +565,11 @@ section {
     }
 
     #aboutFooter{
-        min-height: 82.5vh;
+        min-height: 84.5vh;
     }
 
     #contactFooterDiv {
-        min-height: 93vh;
+        min-height: 94vh;
     }
 }
 
@@ -577,6 +582,10 @@ section {
     
     .card img {
         height: 9.5rem;
+    }
+
+    #galleryShow a {
+        margin-left: 0;
     }
 
     #testiContent {
@@ -617,7 +626,7 @@ section {
     }
 
     #contactFooterDiv {
-        min-height: 92vh;
+        min-height: 83.5vh;
     }
 
     #galleryCarousel {
@@ -671,7 +680,7 @@ section {
     }
 
     #contactFooterDiv {
-        min-height: 88vh;
+        min-height: 83.5vh;
     }
 
     #aboutContent, #contactContent   {
@@ -761,6 +770,10 @@ section {
 
     #contactFooterDiv {
         min-height: 82.5vh;
+    }
+
+    #aboutFooter{
+        min-height: 83.5vh;
     }
 
 

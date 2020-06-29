@@ -1,8 +1,11 @@
 <%- include('../partials/header') %>
 
 <div id="galleryShow">
-    <a href="/gallery"><i class="fas fa-long-arrow-alt-left"></i></a>
-    <h1><%= gallery.title %></h1>
+    <div id="galleryTop">
+        <a href="/gallery"><i class="fas fa-long-arrow-alt-left"></i></a>
+        <h1><%= gallery.title %></h1>
+    </div>
+    
     <img class="rounded" src="<%= gallery.image %>" alt="<%= gallery.description %>">
     <div class="mt-3">
         <h3>
@@ -21,11 +24,12 @@
         <% let y = date.getFullYear() %>
     <p id="createdShow">Added on: <%= d + '/' + m + '/' + y %></p>
     </div>
-    
-    <footer>
+    <footer id="showFooter">
         <span><i class="far fa-copyright"></i> Danene Copping 2020 - All Rights Reserved</span>
     </footer>
+  
 </div>
+
 
 
 <%- include('../partials/footer') %>
