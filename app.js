@@ -17,7 +17,7 @@ const express                   = require('express'),
 
 const url =  process.env.MONGOURL || 'mongodb://localhost/danene';  
 
-mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }).then(() =>{
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false}).then(() =>{
     console.log('Connected to Database!');
 }).catch(err => {
     console.log('ERROR', err.message);

@@ -137,7 +137,7 @@ router.put('/about/:id', middleware.isLoggedIn, (req, res) => {
             res.redirect('back');
         } else {
             req.flash('success','Successfully Updated!');
-            res.redirect('/about');
+            res.redirect('/dashboard');
         }
     });
 })

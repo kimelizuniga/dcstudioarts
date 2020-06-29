@@ -2,12 +2,12 @@
 
 <div class="container topPad">
     <div class="content">
-        <h1>New About</h1>
+        <h1>Edit About</h1>
         <div class="container newGalContain">
-            <form action="/about" method="POST">
+            <form action="/about/<%= about._id %>?_method=PUT" method="POST">
                 <div class="form-group">
                     <label for="about">About</label>
-                    <input id="aboutForm" class="form-control" type="text" placeholder="about" name="about">
+                    <textarea id="aboutForm" class="form-control" type="text" placeholder="about" name="about[about]" rows="10"><%= about.about %></textarea>
                 </div>
                 
                 <div class="form-group">
