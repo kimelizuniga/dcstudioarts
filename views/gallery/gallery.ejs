@@ -23,15 +23,16 @@
                                 <a href="/gallery/<%= gallery._id %>/edit"><i class="fas fa-pencil-alt"></i></a> 
                                 <a href="/gallery/<%= gallery._id %>/delete"><i class="fas fa-trash-alt"></i></a>   
                                 <% } %>
-                                <h5><%= gallery.title %> - 
-                                    <span id="galPrice">
+                                <h5><%= gallery.title %> 
+                                    <span id="galPrice" class="wordBreak">
                                         <% if( gallery.price > 0) { %>
-                                        $
+                                            - $<%= gallery.price %>
+                                        <% } else  {%>
+                                            - <%= gallery.price %>
                                         <% } %>
                                         <% if( gallery.price.replace(/^\s*/, "") == ""){ %>
-                                            N/A
+                                            $N/A
                                         <% } %>
-                                        <%= gallery.price %>
                                     </span>
                                 </h5>
                             </div>

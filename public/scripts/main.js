@@ -22,4 +22,3 @@ $('#password, #confirm_password').on('keyup', function () {
       $('#emailPassword').prop('disabled', true)
     }
   });
-
