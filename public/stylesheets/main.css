@@ -566,11 +566,7 @@ footer {
         height: 9.5rem;
     }
 
-    #announcement img {
-        width: 80%;
   
-    }
-
     #galleryShow a {
         margin-left: 0;
     }
@@ -733,7 +729,7 @@ footer {
     }
 
     #galleryShow img {
-       height: 22rem;
+      height: auto;
        width: 90%;
     }
 
