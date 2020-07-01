@@ -620,7 +620,7 @@ footer {
     }
 
     #galleryShow img {
-        width: 70%;
+        max-width: 70%;
     }
 
     #galleryShow a {
@@ -673,7 +673,7 @@ footer {
     }
     
     #galleryShow img {
-        width: 90%;
+        max-width: 90%;
     }
 
     #socialMedia {
@@ -729,9 +729,8 @@ footer {
     }
 
     #galleryShow img {
-      height: auto;
-      max-width: 90%;
-    }
+        max-width: 90%;
+      }
 
     #galleryCarousel img {
         height:45vh;
