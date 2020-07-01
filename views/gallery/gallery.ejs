@@ -27,12 +27,12 @@
                                     <span id="galPrice" class="wordBreak">
                                         <% if( gallery.price > 0) { %>
                                             - $<%= gallery.price %>
-                                        <% } else  {%>
+                                        <% } else if( gallery.price.replace(/^\s*/, "") == ""){ %>
+                                            
+                                        <% } else {%>
                                             - <%= gallery.price %>
                                         <% } %>
-                                        <% if( gallery.price.replace(/^\s*/, "") == ""){ %>
-                                            
-                                        <% } %>
+                                        
                                     </span>
                                 </h5>
                             </div>
