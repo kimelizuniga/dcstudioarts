@@ -131,6 +131,7 @@ footer {
     margin-right: 2rem;
 }
 
+
 .fa-facebook-square {
     color: #3578E5;
     text-shadow: none;
@@ -203,7 +204,6 @@ footer {
     -ms-transition: background-color 1300ms linear;
     transition: background-color 1300ms linear;
 }
-
 
 #landing h1 {
     padding-top: 50vh;
@@ -704,11 +704,6 @@ footer {
         padding-right: 2rem;
    
     }
-
-    /* #gallery {
-        position: unset;
-        height: 100%;
-    } */
 
     #landingContent h1 {
         font-size: 3.5rem;
