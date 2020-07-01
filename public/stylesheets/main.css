@@ -485,9 +485,9 @@ footer {
     flex-direction: column;
 }
 
-#showContent {
+/* #showContent {
     flex-grow: 1;
-}
+} */
 
 #imgContain img{
     max-width: 100vw;
