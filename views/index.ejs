@@ -14,7 +14,9 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <a href="/gallery">
-              <img class="d-block rounded" src="<%= quotes[0].image %>" alt="First slide">
+              <div>
+                <img class="d-block rounded" src="<%= quotes[0].image %>" alt="First slide">
+              </div>
             </a>
             <div class="quoteText rounded">
               <h4><%= quotes[0].quote %></h4>
@@ -24,7 +26,10 @@
           <% for(let i = 1; i < quotes.length; i++){ %>
             <div class="carousel-item">
               <a href="/gallery">
-                <img class="d-block rounded" src="<%= quotes[i].image %>" alt="First slide">
+                <div>
+                  <img class="d-block rounded" src="<%= quotes[i].image %>" alt="First slide">
+                </div>
+                
               </a>
               <div class="quoteText rounded">
                 <h4><%= quotes[i].quote %></h4>
