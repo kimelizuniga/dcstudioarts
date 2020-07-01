@@ -506,7 +506,7 @@ footer {
 
 #galleryShow img {
     margin-top: 1rem;
- 
+    max-height: 100%;
 }
 
 /* DELETE IMAGE */
@@ -731,8 +731,9 @@ footer {
         font-size: 0.8rem;
     }
 
-    #galleryShow img {
-        max-width: 90%;
+    #showContent img {
+        height: 100vh;
+        width: 100vw;
       }
 
     #galleryCarousel img {
