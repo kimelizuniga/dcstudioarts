@@ -681,7 +681,7 @@ footer {
 
 }
 
-@media (max-width: 450px) {
+@media only screen and (max-width: 450px) {
 
     .row {
         padding-bottom: 0rem;
@@ -729,7 +729,6 @@ footer {
 
     #galleryShow img {
         max-width: 90%;
-        flex-grow: 1;
       }
 
     #galleryCarousel img {
