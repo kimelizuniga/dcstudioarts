@@ -728,8 +728,8 @@ footer {
     }
 
     #galleryShow img {
-        height: unset;
-        width: unset;
+        max-width: 90%;
+        flex-grow: 1;
       }
 
     #galleryCarousel img {
