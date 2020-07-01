@@ -627,13 +627,6 @@ footer {
     } */
 
     
-    #showContent img {
-        height: 100vh;
-        width: 100vw;
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      
     #galleryShow a {
         padding-left: 1.5rem;
     }
@@ -740,6 +733,12 @@ footer {
         font-size: 0.8rem;
     }
 
+/*     
+    #showContent img {
+       
+        padding-left: 1rem;
+        padding-right: 1rem;
+      } */
 
     #galleryCarousel img {
         height:45vh;
