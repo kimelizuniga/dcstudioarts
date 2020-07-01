@@ -485,6 +485,10 @@ footer {
     flex-direction: column;
 }
 
+#showContent {
+    flex-grow: 1;
+}
+
 #galleryTop {
     padding-top: 5rem;
 }
@@ -502,7 +506,7 @@ footer {
 
 #galleryShow img {
     margin-top: 1rem;
-    /* height: 30rem; */
+    width: 100%;
 }
 
 /* DELETE IMAGE */
@@ -681,7 +685,7 @@ footer {
 
 }
 
-@media only screen and (max-width: 450px) {
+@media (max-width: 450px) {
 
     .row {
         padding-bottom: 0rem;
