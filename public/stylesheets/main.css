@@ -730,7 +730,7 @@ footer {
 
     #galleryShow img {
       height: auto;
-       width: 90%;
+      max-width: 90%;
     }
 
     #galleryCarousel img {
