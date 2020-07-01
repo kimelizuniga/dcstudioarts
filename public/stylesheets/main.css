@@ -489,6 +489,13 @@ footer {
     flex-grow: 1;
 }
 
+
+
+#imgContain img{
+    max-width: 100vw;
+    padding: 0 1rem;
+}
+
 #galleryTop {
     padding-top: 5rem;
 }

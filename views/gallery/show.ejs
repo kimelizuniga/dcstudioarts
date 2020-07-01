@@ -6,7 +6,9 @@
             <a href="/gallery"><i class="fas fa-long-arrow-alt-left"></i></a>
             <h1><%= gallery.title %></h1>
         </div>
-        <img class="rounded" src="<%= gallery.image %>" alt="<%= gallery.description %>">
+        <div id="imgContain">
+            <img class="rounded" src="<%= gallery.image %>" alt="<%= gallery.description %>">
+        </div>
         <div class="mt-3">
             <h3>
                 <% if( gallery.price > 0) { %>
