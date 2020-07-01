@@ -526,6 +526,7 @@ footer {
 
 /* MOBILE RESPONSIVE */
 
+@import url("stylesheets/main.css");
 
 @media (max-width: 1400px){
 
