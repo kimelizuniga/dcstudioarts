@@ -626,6 +626,14 @@ footer {
         max-width: 70%;
     } */
 
+    
+    #showContent img {
+        height: 100vh;
+        width: 100vw;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      
     #galleryShow a {
         padding-left: 1.5rem;
     }
@@ -679,12 +687,6 @@ footer {
         max-width: 90%;
     } */
 
-    #showContent img {
-        height: 100vh;
-        width: 100vw;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-      }
 
     #socialMedia {
         padding-top: 0rem;
