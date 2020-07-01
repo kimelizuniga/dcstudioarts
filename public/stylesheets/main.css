@@ -619,9 +619,9 @@ footer {
         width: 50vw;
     }
 
-    #galleryShow img {
+    /* #galleryShow img {
         max-width: 70%;
-    }
+    } */
 
     #galleryShow a {
         padding-left: 1.5rem;
@@ -672,9 +672,9 @@ footer {
         width: 60vw;
     }
     
-    #galleryShow img {
+    /* #galleryShow img {
         max-width: 90%;
-    }
+    } */
 
     #socialMedia {
         padding-top: 0rem;
@@ -728,9 +728,9 @@ footer {
         font-size: 0.8rem;
     }
 
-    #galleryShow img {
+    /* #galleryShow img {
         max-width: 90%;
-      }
+      } */
 
     #galleryCarousel img {
         height:45vh;
