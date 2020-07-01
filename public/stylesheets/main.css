@@ -679,6 +679,11 @@ footer {
         max-width: 90%;
     } */
 
+    #showContent img {
+        height: 100vh;
+        width: 100vw;
+      }
+
     #socialMedia {
         padding-top: 0rem;
     }
@@ -731,10 +736,6 @@ footer {
         font-size: 0.8rem;
     }
 
-    #showContent img {
-        height: 100vh;
-        width: 100vw;
-      }
 
     #galleryCarousel img {
         height:45vh;
