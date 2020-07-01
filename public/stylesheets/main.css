@@ -214,6 +214,19 @@ footer {
     text-shadow: 3px 3px 5px black;
 }
 
+#announcement {
+    margin-bottom: 10rem;
+}
+
+#announcement img {
+    width: 40vw;
+}
+
+#announcement h2 {
+    margin-top: 2rem;
+    color: white;
+}
+
 #gallery {
     background-image: url('https://scontent.fybz2-2.fna.fbcdn.net/v/t1.15752-9/100985376_559416638110408_5014091095051599872_n.jpg?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=jjCaoSHUcwIAX_HPUUG&_nc_ht=scontent.fybz2-2.fna&oh=6004646bd1ef648604ae4536f4cdecc8&oe=5F18C22E');
     background-repeat: no-repeat;
@@ -551,6 +564,10 @@ footer {
     
     .card img {
         height: 9.5rem;
+    }
+
+    #announcement img {
+        width: 70vw;
     }
 
     #galleryShow a {
