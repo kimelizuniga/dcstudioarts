@@ -219,7 +219,7 @@ footer {
 }
 
 #announcement img {
-    width: 40vw;
+    width: 60%;
 }
 
 #announcement h2 {
@@ -567,7 +567,7 @@ footer {
     }
 
     #announcement img {
-        width: 70vw;
+        width: 80%;
     }
 
     #galleryShow a {
