@@ -4,10 +4,13 @@
   <div id="landingContent">
     <h1>Danene Copping</h1>
     <a href="#carouselContent"><i class="fas fa-chevron-down"></i></a>
-    <!-- <div id="announcement">
-      <img src="https://thumbs.gfycat.com/ReadyWickedHamadryas-size_restricted.gif" alt="">
-      <h2>Happy Canada Day!</h2>
-    </div> -->
+    <% if(announcement.length > 0){ %>
+      <div id="announcement">
+        <img id="imgAnnounce" src="<%= announcement[0].image %>" alt="announcement image">
+        <h2><%= announcement[0].message %></h2>
+      </div>
+    <% } %>
+    
   <% if(quotes.length != 0){ %>
     <div id="carouselContent">
       <div id="galleryCarousel" class="carousel slide" data-ride="carousel" data-pause="hover">

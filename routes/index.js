@@ -9,7 +9,8 @@ const   express           = require("express"),
         Testimony         = require('../models/testimonials'),
         About             = require('../models/index'),
         Email             = require('../models/email'),
-        Quote             = require('../models/quote') 
+        Quote             = require('../models/quote'),
+        Announcement      = require('../models/announcement'),
         nodemailer        = require('nodemailer'),
         passport          = require("passport");
 
@@ -29,7 +30,9 @@ router.get('/', (req,res)=>{
         if(err){
             console.log(err)
         } else {
-            res.render('index', {quotes: allQuotes})
+            Announcement.find({}, (err, allAnnouncements) => {
+                res.render('index', {quotes: allQuotes, announcement: allAnnouncements})
+            })
         }
     })
 })
@@ -290,7 +293,7 @@ router.put('/quotes/:id', middleware.isLoggedIn, (req, res) => {
             req.flash('error', err.message);
             res.redirect('back');
         } else {
-            req.flash('success','Successfully Updated!');
+            req.flash('success','Quote successfully updated!');
             res.redirect('/quotes');
         }
     });
@@ -341,13 +344,20 @@ router.get('/dashboard', middleware.isLoggedIn, (req,res) => {
                                     if(err){
                                         console.log(err)
                                     } else {
-                                        res.render('dashboard',{
-                                            quotes: allQuotes,
-                                            galleries: allGalleries,
-                                            abouts: allAbouts,
-                                            emails: allEmails,
-                                            testimonials: allTestimonials
-                                        })
+                                       Announcement.find({}, (err, allAnnouncements)=> {
+                                           if(err){
+                                               console.log(err)
+                                           } else {
+                                            res.render('dashboard',{
+                                                quotes: allQuotes,
+                                                galleries: allGalleries,
+                                                abouts: allAbouts,
+                                                emails: allEmails,
+                                                testimonials: allTestimonials,
+                                                announcements: allAnnouncements
+                                            })
+                                           }
+                                       })
                                     }
                                 })    
                               }
@@ -356,6 +366,63 @@ router.get('/dashboard', middleware.isLoggedIn, (req,res) => {
                     })
                 }
             })
+        }
+    })
+})
+
+// ANNOUNCEMENT 
+
+router.get('/announcement', (req,res) => {
+    res.render('announcement')
+})
+
+router.post('/announcement', (req,res) => {
+    const message = req.body.message,
+          image   = req.body.image
+
+    const newAnnouncement = {message: message, image: image}   
+
+    Announcement.create(newAnnouncement, (err, newCreated) => {
+        if(err){
+            console.log(err);
+        } else {
+            req.flash('success','Successfully added announcement')
+            res.redirect('/dashboard')
+        }
+    })
+})
+
+router.get('/announcement/:id/edit', (req, res)=> {
+    Announcement.findById(req.params.id, (err, foundAnnouncement)=> {
+        res.render('announceEdit', {announcement: foundAnnouncement})
+    })
+})
+
+router.put('/announcement/:id', (req, res)=> {
+    Announcement.findByIdAndUpdate(req.params.id, req.body.announcement, (err, announcement) => {
+        if(err){
+            console.log(err)
+        } else {
+            req.flash('success','Announcement successfully updated!');
+            res.redirect('/dashboard')
+        }
+    })
+})
+
+router.get('/announcement/:id/delete', (req, res) => {
+    Announcement.findById(req.params.id, (err, foundAnnouncement)=> {
+        res.render('announceDelete', {announcement: foundAnnouncement})
+    })
+})
+
+router.delete('/announcement/:id', middleware.isLoggedIn, (req, res) => {
+    Announcement.findById(req.params.id, (err, announcement) => {
+        if(err){
+            res.redirect('/dashboard')
+        } else {
+            announcement.remove();
+            req.flash('success', 'Announcement removed successfully')
+            res.redirect('/dashboard')
         }
     })
 })
